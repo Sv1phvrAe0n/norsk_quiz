@@ -1,9 +1,7 @@
 import 'dart:math';
-import 'package:norsk_quiz/1q.dart';
-
 
 List<String> grammar = ['Singular Indefinite', "Singular Definite", "Plural Indefinite", "Plural Definite"];
-
+// List<String> translations = ['Friend', 'Girl'];
 var wordsList = [
   words1, words2, words3, words4, words5, words6, words7, words8, words9,
   words10, words11, words12, words13, words14, words15, words16, words17, words19,
@@ -11,20 +9,69 @@ var wordsList = [
   words30, words31, words32, words33, words34, words35, words36, words37, words38
 ];
 
+// wordsList.asMap()
+// { '0': words1, '1': words2, '2': words3 ... }
+
+// var dataList = wordsList.map((index, words) {
+//   return {'words': words, 'translation': translations[index]}
+// })
+
+var dataList = [
+  {'words': words1, 'translation': 'Friend'},
+  {'words': words2, 'translation': 'Girl'},
+  {'words': words3, 'translation': 'Picture'},
+  {'words': words4, 'translation': 'Slice of bread'},
+  {'words': words5, 'translation': 'Newspaper'},
+  {'words': words6, 'translation': 'Card'},
+  {'words': words7, 'translation': 'Boy'},
+  {'words': words8, 'translation': 'Sausage'},
+  {'words': words9, 'translation': 'Apple'},
+  {'words': words10, 'translation': 'Banana'},
+  {'words': words11, 'translation': 'Bottle'},
+  {'words': words12, 'translation': 'Language'},
+  {'words': words13, 'translation': 'Goose'},
+  {'words': words14, 'translation': 'Hand'},
+  {'words': words15, 'translation': 'Shore'},
+  {'words': words16, 'translation': 'Tree'},
+  {'words': words17, 'translation': 'Hunter'},
+  {'words': words18, 'translation': 'Dog'},
+  {'words': words19, 'translation': 'Man'},
+  {'words': words20, 'translation': 'Foot'},
+  {'words': words21, 'translation': 'Book'},
+  {'words': words22, 'translation': 'Night'},
+  {'words': words23, 'translation': 'Cup'},
+  {'words': words24, 'translation': 'Pear'},
+  {'words': words25, 'translation': 'Table'},
+  {'words': words26, 'translation': 'Doctor'},
+  {'words': words27, 'translation': 'Door'},
+  {'words': words28, 'translation': 'Window'},
+  {'words': words29, 'translation': 'Day'},
+  {'words': words30, 'translation': 'Lamp'},
+  {'words': words31, 'translation': 'Pharmacy'},
+  {'words': words32, 'translation': 'Cafe'},
+  {'words': words33, 'translation': 'Film'},
+  {'words': words34, 'translation': 'Lady'},
+  {'words': words35, 'translation': 'Word'},
+  {'words': words36, 'translation': 'Student'},
+  {'words': words37, 'translation': 'Child'},
+  {'words': words38, 'translation': 'Chair'}
+];
+
 class Quiz {
-  Quiz({this.quizId, this.qnaMap});
+  Quiz({this.quizId, this.qnaMap, this.translation});
   final int quizId;
+  final String translation;
   final Map<String, String> qnaMap;
 }
 
-List<Quiz> quizes = wordsList.map((words) {
-  return Quiz(quizId: Random().nextInt(300000000) + 1, qnaMap: Map.fromIterables(words, grammar));
+List<Quiz> quizes = dataList.map((data) {
+  return Quiz(quizId: Random().nextInt(300000000) + 1, qnaMap: Map.fromIterables(data['words'], grammar), translation: data['translation']);
 }).toList()..shuffle(Random());
 
 List<String> words1 = ['En venn', 'Vennen', 'Venner','Vennene'];
 List<String> words2 = ['Ei jente', 'Jenta', 'Jenter','Jentene'];
 List<String> words3 = ['Et bilde', 'Bildet', 'Bilder', 'Bildene'];
-List<String> words4 = ['En brødskive', 'Brødskiven', 'Brødskiver','Brødskivene'];
+List<String> words4 = ['Ei brødskive', 'Brødskiva', 'Brødskiver','Brødskivene'];
 List<String> words5 = ['Ei avis', 'Avisa', 'Aviser','Avisene'];
 List<String> words6 = ['Et kart', 'Kartet', 'Kart', 'Kartene'];
 List<String> words7 = ['En gutt', 'Gutten', 'Gutter','Guttene'];
@@ -58,7 +105,7 @@ List<String> words34 = ['Ei dame', 'Dama', 'Damer', 'Damene'];
 List<String> words35 = ['Et ord', 'Ordet', 'Ord', 'Ordene'];
 List<String> words36 = ['En student', 'Studenten', 'Studenter', 'Studentene'];
 List<String> words37 = ['Et barn', 'Barnet', 'Barn', 'Barna'];
-List<String> words38 = ['En skje', 'Skjeen', 'Skjeer', 'Skjeene'];
+List<String> words38 = ['En stol', 'Stolen', 'Stoler', 'Stolene'];
 // List<String> words39 = ['', '', '', ''];
 // List<String> words40 = ['', '', '', ''];
 // List<String> words41 = ['', '', '', ''];

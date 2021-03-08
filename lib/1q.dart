@@ -15,6 +15,7 @@ class _OneQState extends State<OneQ> {
   int currentQuizIndex = 0;
   List<String> guessedVariants = [];
 
+
   reset() {
     setState(() {
       seed = 0;
@@ -22,6 +23,7 @@ class _OneQState extends State<OneQ> {
   }
 
 bool isVisible = true;
+
 
   @override
   Widget build(BuildContext context) {
@@ -90,18 +92,59 @@ bool isVisible = true;
                 ]
             )
                 : Column(mainAxisAlignment: MainAxisAlignment.center, children: <
-            Widget>[
-          Wrap(
+              Widget>[
+                Text.rich(
+                TextSpan(
+                  text: (currentQuizIndex+1).toString(),
+                    style: TextStyle(
+                color: Color(0xff354F52).withOpacity(0.5),
+            fontFamily: 'Comfortaa',
+            fontSize: 15.0,
+            fontWeight: FontWeight.bold),
+                    children: [
+                      TextSpan(
+                        text: '/',
+                        style: TextStyle(
+                            color: Color(0xff354F52).withOpacity(0.5),
+                            fontFamily: 'Comfortaa',
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      TextSpan(
+                        text: (quizes.length).toString(),
+                        style: TextStyle(
+                            color: Color(0xff354F52).withOpacity(0.5),
+                            fontFamily: 'Comfortaa',
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ]
+                )
+                ),
+              Divider(thickness: 1.0),
+              SizedBox(height: 25),
+              Container(
+                child: Text(quizes[currentQuizIndex].translation,
+                style: TextStyle(
+                  color: Color(0xff354F52),
+                  fontFamily: 'Comfortaa',
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,)
+              ),
+              ),
+              SizedBox(height: 30),
+              Wrap(
             direction: Axis.horizontal,
             alignment: WrapAlignment.spaceAround,
             runAlignment: WrapAlignment.center,
-            children: quizes[currentQuizIndex].qnaMap.keys.map((variant) {
-              bool currentVariantWasGuessed = guessedVariants
+            children:
+                  quizes[currentQuizIndex].qnaMap.keys.map((variant) {
+                  bool currentVariantWasGuessed = guessedVariants
                   .any((guessedVariant) => guessedVariant == variant);
-              return FittedBox(
-                fit: BoxFit.fitWidth,
-                child:
-                Container(
+                   return FittedBox(
+                  fit: BoxFit.fitWidth,
+                 child:
+                 Container(
                   color: Color(0xff354F52)
                       .withOpacity(currentVariantWasGuessed ? 0.5 : 1),
                   margin: const EdgeInsets.all(6.0),
