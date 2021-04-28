@@ -1,0 +1,349 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'file:///C:/Users/sirni/AndroidStudioProjects/norsk_quiz/lib/nouns/List.dart';
+import 'file:///C:/Users/sirni/AndroidStudioProjects/norsk_quiz/lib/nouns/Rules.dart';
+import 'dart:math';
+import 'package:flutter/services.dart';
+import 'package:norsk_quiz/styles.dart';
+
+
+class OneQ extends StatefulWidget {
+  OneQ({Key key}) : super(key: key);
+  createState() => _OneQState();
+}
+
+class _OneQState extends State<OneQ> {
+  int seed = 0;
+  int currentQuizIndex = 0;
+  List<String> guessedVariants = [];
+
+  reset() {
+    setState(() {
+      seed = 0;
+    });
+  }
+
+  bool isVisible = true;
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xffFFFFFF),
+      endDrawer: Rules(),
+      appBar: AppBar(
+        centerTitle: true,
+        brightness: Brightness.dark,
+        title: Text(
+          'My Bokmål',
+          style: TextStyle(
+            color: Color(0xffFFFFFF),
+            fontFamily: 'Comfortaa',
+          ),
+        ),
+        backgroundColor: Color(0xff231A31),
+        actions: [
+          Builder(
+            builder: (context) => IconButton(
+              icon: Icon(Icons.menu_book_rounded),
+              onPressed: () => Scaffold.of(context).openEndDrawer(),
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            ),
+          ),
+        ],
+      ),
+      body: SafeArea(
+        child: Center(
+          child: currentQuizIndex > quizes.length - 1 ?
+          Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget> [
+                Text('Well done!', style: TextStyle(
+                  color: Color(0xff231A31),
+                  fontFamily: 'Comfortaa',
+                  fontSize: 35.0,
+                  fontWeight: FontWeight.bold,
+                ),),
+                SizedBox(height: 40),
+                SizedBox(
+                  width: 220.0,
+                  height: 65.0,
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Color(0xffFDCFB2),
+                      padding: EdgeInsets.all(8.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/1q');
+                    },
+                    child:  Text(
+                      'Practice again',
+                      style: TextStyle(
+                          fontSize: 25.0,
+                          fontFamily: 'Comfortaa',
+                          color: Color(0xff231A31),
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                SizedBox(
+                  width: 220.0,
+                  height: 65.0,
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Color(0xffFDCFB2),
+                      padding: EdgeInsets.all(8.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/');
+                    },
+                    child:  Text(
+                      'To main menu',
+                      style: TextStyle(
+                          fontSize: 25.0,
+                          fontFamily: 'Comfortaa',
+                          color: Color(0xff231A31),
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ]
+          )
+              : SafeArea(
+            child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: 10),
+                  RichText(
+                    text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: (currentQuizIndex+1).toString(),
+                              style: TextStyle(
+                                  color: Color(0xff231A31).withOpacity(0.5),
+                                  fontFamily: 'Comfortaa',
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold)),
+                          TextSpan(
+                            text: '/',
+                            style: TextStyle(
+                                color: Color(0xff231A31).withOpacity(0.5),
+                                fontFamily: 'Comfortaa',
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                              text: (quizes.length).toString(),
+                              style: TextStyle(
+                                  color: Color(0xff231A31).withOpacity(0.5),
+                                  fontFamily: 'Comfortaa',
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold))
+                        ]),
+                  ),
+                  Divider(thickness: 1.0),
+                  SizedBox(height: 55),
+                  Container(
+                    child: Text(quizes[currentQuizIndex].translation,
+                        style: TextStyle(
+                          color: Color(0xff231A31),
+                          fontFamily: 'Comfortaa',
+                          fontSize: 40.0,
+                          fontWeight: FontWeight.bold,)
+                    ),
+                  ),
+                  SizedBox(height: 30),
+                  Wrap(
+                    direction: Axis.horizontal,
+                    alignment: WrapAlignment.spaceAround,
+                    runAlignment: WrapAlignment.center,
+                    children:
+                    quizes[currentQuizIndex].qnaMap.keys.map((variant) {
+                      bool currentVariantWasGuessed = guessedVariants
+                          .any((guessedVariant) => guessedVariant == variant);
+                      return FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child:
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            color: Color(0xffFDCFB2) // изначальный цвет плашек для выбора
+                                .withOpacity(currentVariantWasGuessed ? 0.5 : 1),),
+                          margin: const EdgeInsets.all(6.0),
+                          child: Draggable<String>(
+                              data: variant,
+                              child: Word(word: variant,
+                                  color: Color(0xff231A31).withOpacity(currentVariantWasGuessed ? 0.2 : 1)),
+                              childWhenDragging:
+                              Word(word: variant, color: Color(0xff231A31).withOpacity(0.2)),
+                              feedback: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                                      color: Color(0xffFDCFB2).withOpacity(0.5) //цвет плашки когда она несется
+                                  ),
+                                  margin: const EdgeInsets.all(6.0),
+                                  child:
+                                  Word(word: variant, color: Color(0xff231A31)))),
+                        ),
+                      );
+                    }).toList()
+                      ..shuffle(Random(seed+1)),
+                  ),
+                  SizedBox(height: 40),
+                  Wrap(
+                      direction: Axis.horizontal,
+                      alignment: WrapAlignment.spaceAround,
+                      runAlignment: WrapAlignment.center,
+                      children: quizes[currentQuizIndex].qnaMap.values.map((answer) {
+                        bool currentAnswerWasGuessed = guessedVariants.any(
+                                (guessedVariant) =>
+                            quizes[currentQuizIndex].qnaMap[guessedVariant] ==
+                                answer);
+                        return DragTarget<String>(
+                            onWillAccept: (receivedVariant) =>
+                            quizes[currentQuizIndex].qnaMap[receivedVariant] ==
+                                answer,
+                            onAccept: (rightVariant) {
+                              setState(() {
+                                guessedVariants.add(rightVariant);
+                              });
+                            },
+                            builder: (context, acceptedWord, rejectedWords) =>
+                                Container(
+                                  child: FittedBox(
+                                    fit: BoxFit.fitWidth,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                                        color: currentAnswerWasGuessed
+                                            ? Color(0xffFDCFB2)
+                                            : Color(0xff392A50).withOpacity(0.1),
+                                      ),
+                                      margin: const EdgeInsets.all(5.0),
+                                      child: Container(
+                                        child: currentAnswerWasGuessed
+                                            ? ResWord(
+                                          resword: guessedVariants.firstWhere(
+                                                  (guessedVariant) =>
+                                              quizes[currentQuizIndex]
+                                                  .qnaMap[guessedVariant] ==
+                                                  answer),
+                                          color: Color(0xff231A31),
+                                          fontsize: 25.0,
+                                        )
+                                            : ResWord(
+                                          resword: answer,
+                                          color: Color(0xff231A31).withOpacity(0.5),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ));
+                      }).toList()),
+                  SizedBox(height: 20),
+                  // ignore: deprecated_member_use
+                  RaisedButton.icon(
+                    color: guessedVariants.length == 4
+                        ? Color(0xff231A31)
+                        : Color(0xff231A31).withOpacity(0.2),
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    //disabledColor: Color(0xff788AA3).withOpacity(0.5),
+                    onPressed: () => {
+                      setState(() {
+                        if (guessedVariants.length == 4) {
+                          currentQuizIndex++;
+                          guessedVariants = [];
+                          seed+=1;
+                        }
+                      })
+                    },
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                    label: Text(
+                      'Next',
+                      style: TextStyle(
+                        color: Color(0xffFFFFFF),
+                        fontSize: 25.0,
+                        fontFamily: 'Comfortaa',
+                      ),
+                    ),
+                    icon: Icon(Icons.check_circle_outline_outlined,
+                        color: Color(0xffFFFFFF)),
+                  ),
+                  Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [TextButton.icon(
+                          style: TextButton.styleFrom(
+                              backgroundColor: Color(0xffFFFFFF)
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/');
+                          },
+                          icon: Icon(Icons.arrow_back_rounded, color: Color(0xff231A31)),
+                          label: Text('Back to main menu',
+                              style: BoldRegular),
+                        ),],
+                      )
+                  ),
+                ]),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Word extends StatelessWidget {
+  Word({Key key, this.word, this.color}) : super(key: key);
+  final String word;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      type: MaterialType.transparency,
+      child: Container(
+        padding: EdgeInsets.all(8.0),
+        child: Text(
+          word,
+          style:
+          TextStyle(fontSize: 25.0, color: color, fontFamily: 'Comfortaa'),
+        ),
+      ),
+    );
+  }
+}
+
+class ResWord extends StatelessWidget {
+  ResWord({Key key, this.resword, this.color, this.fontsize = 15.0})
+      : super(key: key);
+  final String resword;
+  final Color color;
+  double fontsize;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      type: MaterialType.transparency,
+      child: Container(
+        padding: EdgeInsets.all(8.0),
+        height: 45,
+        width: 180,
+        alignment: Alignment.center,
+        child: Text(
+          resword,
+          style: TextStyle(
+              fontSize: fontsize, color: color, fontFamily: 'Comfortaa'),
+        ),
+      ),
+    );
+  }
+}
