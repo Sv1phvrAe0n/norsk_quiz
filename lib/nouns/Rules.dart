@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:norsk_quiz/styles.dart';
-import 'file:///C:/Users/sirni/AndroidStudioProjects/norsk_quiz/lib/nouns/1q.dart';
 
 class Rules extends StatefulWidget {
   @override

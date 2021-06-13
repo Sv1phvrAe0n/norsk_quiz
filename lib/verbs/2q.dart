@@ -3,8 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:norsk_quiz/styles.dart';
-import 'file:///C:/Users/sirni/AndroidStudioProjects/norsk_quiz/lib/verbs/Rulesverbs.dart';
-import 'file:///C:/Users/sirni/AndroidStudioProjects/norsk_quiz/lib/verbs/Listverbs.dart';
+import 'package:norsk_quiz/verbs/Rulesverbs.dart';
+import 'package:norsk_quiz/verbs/Listverbs.dart';
 import 'dart:math';
 
 
@@ -48,7 +48,7 @@ class _VerbQState extends State<VerbQ> {
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: Color(0xffFFFFFF),
-      // endDrawer: Rules(),
+      endDrawer: RulesVerbs(),
       appBar: AppBar(
         centerTitle: true,
         brightness: Brightness.dark,
@@ -58,6 +58,11 @@ class _VerbQState extends State<VerbQ> {
             color: Color(0xffFFFFFF),
             fontFamily: 'Comfortaa',
           ),
+        ),
+        leading: IconButton(icon: Icon(Icons.arrow_back_rounded),
+          onPressed: () {
+            Navigator.pushNamed(context, '/v');
+          },
         ),
         backgroundColor: Color(0xff231A31),
         actions: [
@@ -166,7 +171,7 @@ class _VerbQState extends State<VerbQ> {
                         ]),
                   ),
                   Divider(thickness: 1.0),
-                  SizedBox(height: 55),
+                  SizedBox(height: 25),
                   Container(
                     child: Text(quizes[currentQuizIndex].translation, //WORD IN ENGLISH
                         style: TextStyle(
@@ -176,7 +181,7 @@ class _VerbQState extends State<VerbQ> {
                           fontWeight: FontWeight.bold,)
                     ),
                   ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 25),
                   Wrap(
                     direction: Axis.horizontal,
                     alignment: WrapAlignment.spaceAround,
@@ -278,6 +283,9 @@ class _VerbQState extends State<VerbQ> {
                     padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                     //disabledColor: Color(0xff788AA3).withOpacity(0.5),
                     onPressed: () {
+                      if (filledVariants.length < 4) {
+                        return;
+                      }
                       bool isVariantCorrect(variantToCheck) {
                         String userGrammar = variantToCheck.keys.first;
                         String word = variantToCheck.values.first;
@@ -317,39 +325,24 @@ class _VerbQState extends State<VerbQ> {
                     icon: Icon(Icons.check_circle_outline_outlined,
                         color: Color(0xffFFFFFF)),
                   ),
-                  Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          TextButton.icon(
-                            style: TextButton.styleFrom(
-                                backgroundColor: Color(0xffFFFFFF)
-                            ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: FloatingActionButton(
+                            backgroundColor: Color(0xff231A31),
+                            child: Icon(Icons.refresh, color: Color(0xffFFFFFF)),
                             onPressed: () {
-                              Navigator.pushNamed(context, '/');
-                            },
-                            icon: Icon(Icons.arrow_back_rounded, color: Color(0xff231A31)),
-                            label: Text('Back to main menu',
-                                style: BoldGrammar),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: FloatingActionButton(
-                                backgroundColor: Color(0xff231A31),
-                                child: Icon(Icons.refresh, color: Color(0xffFFFFFF)),
-                                onPressed: () {
-                                  setState(() {
-                                    seed = 0;
-                                    guessedVariants = [];
-                                    filledVariants = [];
-                                  }
-                                  );
-                                }
-                            ),
-                          )
-                        ],
-                      )
+                              setState(() {
+                                seed = 0;
+                                guessedVariants = [];
+                                filledVariants = [];
+                              }
+                              );
+                            }
+                        ),
+                      )],
                   ),
                 ]),
           ),

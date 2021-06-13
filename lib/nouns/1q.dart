@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/sirni/AndroidStudioProjects/norsk_quiz/lib/nouns/List.dart';
-import 'file:///C:/Users/sirni/AndroidStudioProjects/norsk_quiz/lib/nouns/Rules.dart';
+import 'package:norsk_quiz/nouns/List.dart';
+import 'package:norsk_quiz/nouns/Rules.dart';
 import 'dart:math' hide log;
 import 'package:flutter/services.dart';
 import 'package:norsk_quiz/styles.dart';
 import 'dart:math';
 
-import 'dart:developer';
+import 'dart:developer' as d;
 
 class OneQ extends StatefulWidget {
   OneQ({Key key}) : super(key: key);
@@ -61,6 +61,11 @@ bool isVisible = true;
           ),
         ),
         backgroundColor: Color(0xff231A31),
+        leading: IconButton(icon: Icon(Icons.arrow_back_rounded),
+            onPressed: () {
+          Navigator.pushNamed(context, '/n');
+          },
+        ),
         actions: [
           Builder(
             builder: (context) => IconButton(
@@ -279,12 +284,14 @@ bool isVisible = true;
             padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
             //disabledColor: Color(0xff788AA3).withOpacity(0.5),
             onPressed: () {
+              if (filledVariants.length < 4) {
+                return;
+              }
               bool isVariantCorrect(variantToCheck) {
                 String userGrammar = variantToCheck.keys.first;
                 String word = variantToCheck.values.first;
                 String rightGrammar = quizes[currentQuizIndex].qnaMap[word];
-                bool isCorrect = rightGrammar == userGrammar;
-                return isCorrect;
+                return rightGrammar == userGrammar;
               }
               bool areAllVariantsCorrect = filledVariants.every((
                   filledVariant) {
@@ -318,39 +325,24 @@ bool isVisible = true;
             icon: Icon(Icons.check_circle_outline_outlined,
                   color: Color(0xffFFFFFF)),
           ),
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          TextButton.icon(
-                          style: TextButton.styleFrom(
-                              backgroundColor: Color(0xffFFFFFF)
-                          ),
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/');
-                          },
-                          icon: Icon(Icons.arrow_back_rounded, color: Color(0xff231A31)),
-                          label: Text('Back to main menu',
-                              style: BoldGrammar),
-                        ),
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: FloatingActionButton(
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: FloatingActionButton(
                               backgroundColor: Color(0xff231A31),
                               child: Icon(Icons.refresh, color: Color(0xffFFFFFF)),
-                                onPressed: () {
-                                  setState(() {
-                                    seed = 0;
-                                    guessedVariants = [];
-                                    filledVariants = [];
-                                  }
-                                  );
+                              onPressed: () {
+                                setState(() {
+                                  seed = 0;
+                                  guessedVariants = [];
+                                  filledVariants = [];
                                 }
-                                ),
-                          )
-                        ],
-                      )
+                                );
+                              }
+                          ),
+                        )],
                     ),
         ]),
                 ),

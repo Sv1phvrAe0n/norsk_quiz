@@ -1,14 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:io';
 import 'package:norsk_quiz/styles.dart';
 
-class Verbs extends StatefulWidget {
+class Adjectives extends StatefulWidget {
   @override
-  _VerbsState createState() => _VerbsState();
+  _AdjectivesState createState() => _AdjectivesState();
 }
 
-class _VerbsState extends State<Verbs> {
+class _AdjectivesState extends State<Adjectives> {
   @override
   Widget build(BuildContext context) {
 
@@ -41,10 +40,10 @@ class _VerbsState extends State<Verbs> {
                   alignment: Alignment.topCenter,
                   padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
                   child: Text(
-                      'VERBS',
+                      'ADJECTIVES',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(0xffF8AD9D),
+                        color: Color(0xffC8CDE4),
                         fontFamily: 'Comfortaa',
                         fontSize: 52.0,
                         fontWeight: FontWeight.bold,)
@@ -56,14 +55,14 @@ class _VerbsState extends State<Verbs> {
                 height: 65.0,
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Color(0xffF8AD9D),
+                    backgroundColor: Color(0xffC8CDE4),
                     padding: EdgeInsets.all(8.0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/2q');
+                    Navigator.pushNamed(context, '/3q');
                   },
                   child:  Text(
                     'Practice',
@@ -77,14 +76,14 @@ class _VerbsState extends State<Verbs> {
                 height: 65.0,
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Color(0xffF8AD9D),
+                    backgroundColor: Color(0xffC8CDE4),
                     padding: EdgeInsets.all(8.0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/vg');
+                    Navigator.pushNamed(context, '/ag');
                   },
                   child:  Text(
                     'Grammar',
@@ -99,3 +98,4 @@ class _VerbsState extends State<Verbs> {
     );
   }
 }
+

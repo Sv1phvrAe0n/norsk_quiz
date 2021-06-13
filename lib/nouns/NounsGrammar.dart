@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:norsk_quiz/styles.dart';
-import 'file:///C:/Users/sirni/AndroidStudioProjects/norsk_quiz/lib/nouns/1q.dart';
 
 class NounsGram extends StatefulWidget {
   @override
@@ -25,6 +24,12 @@ class _NounsGramState extends State<NounsGram> {
               color: Color(0xffFFFFFF),
               fontFamily: 'Comfortaa',
             ),
+          ),
+          centerTitle: true,
+          leading: IconButton(icon: Icon(Icons.arrow_back_rounded),
+            onPressed: () {
+              Navigator.pushNamed(context, '/n');
+            },
           ),
         ),
         body: SingleChildScrollView(
@@ -365,12 +370,12 @@ class _NounsGramState extends State<NounsGram> {
                                     TextSpan(text: 'En', style: BoldGrammar),
                                     TextSpan(text: ' sykkel', style: MainGrammar),
                                   ])),
-                              SizedBox(height: 2),
-                              RichText(
-                                  text: TextSpan(children: [
-                                    TextSpan(text: 'En', style: BoldGrammar),
-                                    TextSpan(text: ' nøkkel', style: MainGrammar),
-                                  ])),
+                              // SizedBox(height: 2),
+                              // RichText(
+                              //     text: TextSpan(children: [
+                              //       TextSpan(text: 'En', style: BoldGrammar),
+                              //       TextSpan(text: ' nøkkel', style: MainGrammar),
+                              //     ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
@@ -413,12 +418,12 @@ class _NounsGramState extends State<NounsGram> {
                                       TextSpan(text: 'en', style: BoldGrammar)
                                     ])),
                                 SizedBox(height: 2),
-                                RichText(
-                                    text: TextSpan(children: [
-                                      TextSpan(text: 'Nøkkel', style: MainGrammar),
-                                      TextSpan(text: 'en', style: BoldGrammar)
-                                    ])),
-                                SizedBox(height: 2),
+                                // RichText(
+                                //     text: TextSpan(children: [
+                                //       TextSpan(text: 'Nøkkel', style: MainGrammar),
+                                //       TextSpan(text: 'en', style: BoldGrammar)
+                                //     ])),
+                                // SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
                                       TextSpan(text: 'Natt', style: MainGrammar),
@@ -461,14 +466,14 @@ class _NounsGramState extends State<NounsGram> {
                                       TextSpan(text: 'er', style: BoldGrammar)
                                     ],
                                   )),
-                              SizedBox(height: 2),
-                              RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Nøkl', style: MainGrammar),
-                                      TextSpan(text: 'er', style: BoldGrammar)
-                                    ],
-                                  )),
+                              // SizedBox(height: 2),
+                              // RichText(
+                              //     text: TextSpan(
+                              //       children: [
+                              //         TextSpan(text: 'Nøkl', style: MainGrammar),
+                              //         TextSpan(text: 'er', style: BoldGrammar)
+                              //       ],
+                              //     )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
@@ -514,12 +519,12 @@ class _NounsGramState extends State<NounsGram> {
                                     TextSpan(text: 'Sykl', style: MainGrammar),
                                     TextSpan(text: 'ene', style: BoldGrammar)
                                   ])),
-                              SizedBox(height: 2),
-                              RichText(
-                                  text: TextSpan(children: [
-                                    TextSpan(text: 'Nøkl', style: MainGrammar),
-                                    TextSpan(text: 'ene', style: BoldGrammar)
-                                  ])),
+                              // SizedBox(height: 2),
+                              // RichText(
+                              //     text: TextSpan(children: [
+                              //       TextSpan(text: 'Nøkl', style: MainGrammar),
+                              //       TextSpan(text: 'ene', style: BoldGrammar)
+                              //     ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
@@ -758,15 +763,12 @@ class _NounsGramState extends State<NounsGram> {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/n');
+                        Navigator.pushNamed(context, '/1q');
                       },
                       child:  Text(
-                        'Back to nouns page',
+                        'Practice',
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 20.0,
-                            fontFamily: 'Comfortaa',
-                            color: Color(0xff231A31)),
+                        style: MainMenu
                       ),
                     ),
                   ),

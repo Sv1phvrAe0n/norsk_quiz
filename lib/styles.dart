@@ -56,3 +56,33 @@ const BoldGrammar = TextStyle(
   fontSize: 17.0,
   fontWeight: FontWeight.bold,
 );
+
+const CursiveGrammar = TextStyle(
+  color: Color(0xff231A31),
+  fontFamily: 'Comfortaa',
+  fontSize: 17.0,
+  fontWeight: FontWeight.normal,
+  fontStyle: FontStyle.italic
+);
+
+const CursiveRegular = TextStyle(
+    color: Color(0xff231A31),
+    fontFamily: 'Comfortaa',
+    fontSize: 13.0,
+    fontWeight: FontWeight.normal,
+    fontStyle: FontStyle.italic
+);
+
+const RegularText1 = TextStyle(
+  color: Color(0xff231A31),
+  fontFamily: 'Comfortaa',
+  fontSize: 14.5,
+  fontWeight: FontWeight.normal,
+);
+
+const BoldRegular1 = TextStyle(
+  color: Color(0xff231A31),
+  fontFamily: 'Comfortaa',
+  fontSize: 14.5,
+  fontWeight: FontWeight.bold,
+);

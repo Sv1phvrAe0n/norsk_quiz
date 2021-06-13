@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:io';
 import 'package:norsk_quiz/styles.dart';
 
 class Nouns extends StatefulWidget {
@@ -24,6 +23,11 @@ class _NounsState extends State<Nouns> {
             color: Color(0xffFFFFFF),
             fontFamily: 'Comfortaa',
           ),
+        ),
+        leading: IconButton(icon: Icon(Icons.arrow_back_rounded),
+          onPressed: () {
+            Navigator.pushNamed(context, '/');
+          },
         ),
       ),
       body: Center(
@@ -61,12 +65,8 @@ class _NounsState extends State<Nouns> {
                     Navigator.pushNamed(context, '/1q');
                   },
                   child:  Text(
-                    'Start practice',
-                    style: TextStyle(
-                        fontSize: 25.0,
-                        fontFamily: 'Comfortaa',
-                        color: Color(0xff231A31),
-                      fontWeight: FontWeight.bold),
+                    'Practice',
+                    style: MainMenu
                   ),
                 ),
               ),
@@ -87,36 +87,7 @@ class _NounsState extends State<Nouns> {
                   },
                   child:  Text(
                     'Grammar',
-                    style: TextStyle(
-                        fontSize: 25.0,
-                        fontFamily: 'Comfortaa',
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xff231A31)),
-                  ),
-                ),
-              ),
-              SizedBox(height: 20.0),
-              SizedBox(
-                width: 220.0,
-                height: 65.0,
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Color(0xffFDCFB2),
-                    padding: EdgeInsets.all(8.0),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/');
-                  },
-                  child:  Text(
-                    'To main menu',
-                    style: TextStyle(
-                        fontSize: 25.0,
-                        fontFamily: 'Comfortaa',
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xff231A31)),
+                    style: MainMenu
                   ),
                 ),
               ),

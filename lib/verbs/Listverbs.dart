@@ -67,7 +67,7 @@ var datalist = [
   {'words': words47, 'translation': 'to cost'},
   {'words': words48, 'translation': 'can, to be able to'},
   {'words': words49, 'translation': 'to allow, let'},
-  {'words': words50, 'translation': 'to make, create'},
+  {'words': words50, 'translation': 'to make, cook'},
   {'words': words51, 'translation': 'to place, lay'},
   {'words': words52, 'translation': 'to read, study'},
   {'words': words53, 'translation': 'to live'},
@@ -115,7 +115,7 @@ var datalist = [
   {'words': words95, 'translation': 'to answer, reply'},
   {'words': words96, 'translation': 'to react'},
   {'words': words97, 'translation': 'to argue'},
-  {'words': words98, 'translation': 'to achieve,\naccomplish'}, //!!!!!!!
+  {'words': words98, 'translation': 'to achieve,\naccomplish'},
   {'words': words99, 'translation': 'to wake up'},
   {'words': words100, 'translation': 'to save, conserve'}
 ];

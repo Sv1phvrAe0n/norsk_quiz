@@ -36,6 +36,7 @@ class _HomeState extends State<Home> {
             fontFamily: 'Comfortaa',
           ),
         ),
+        centerTitle: true,
       ),
       body: Center(
         child: SafeArea(
@@ -49,16 +50,7 @@ class _HomeState extends State<Home> {
                      padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
                      child: Image.asset('images/logo.png')
                  ),
-                 Container(
-                     alignment: Alignment.topCenter,
-                     padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
-                     child: Text(
-                       'Practice norwegian with ease',
-                       textAlign: TextAlign.center,
-                       style: HeaderText,
-                     )
-                 ),
-                 SizedBox(height: 70),
+                 SizedBox(height: 80),
                  Row(
                    mainAxisAlignment: MainAxisAlignment.center,
                    children: [
@@ -121,7 +113,7 @@ class _HomeState extends State<Home> {
                            ),
                          ),
                          onPressed: () {
-                           Navigator.pushNamed(context, '/r');
+                           Navigator.pushNamed(context, '/a');
                          },
                          child:  Text(
                              'Adjectives',
@@ -142,11 +134,11 @@ class _HomeState extends State<Home> {
                            ),
                          ),
                          onPressed: () {
-                         Navigator.pushNamed(context, '/r');
+                         Navigator.pushNamed(context, '/q');
                          },
                          // => exit(0),
                          child:  Text(
-                             'Sentences',
+                             'Questions',
                              style: MainMenu
                          ),
                        ),
