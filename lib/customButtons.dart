@@ -2,10 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'styles.dart';
 
-
 // 4 Home page buttons
 class TextButtons extends StatelessWidget {
-
   final Color customColor;
   final String customAddress;
   final String customText;
@@ -35,7 +33,6 @@ class TextButtons extends StatelessWidget {
 // Each part of speech buttons
 
 class CustomDoubleButtons extends StatelessWidget {
-
   final String customName;
   final Color customColor;
   final String firstAddress;
@@ -43,8 +40,7 @@ class CustomDoubleButtons extends StatelessWidget {
   final String secondAddress;
   final String secondAddressName;
 
-
-  CustomDoubleButtons(this.customName, this.customColor, this.firstAddress, 
+  CustomDoubleButtons(this.customName, this.customColor, this.firstAddress,
       this.firstAddressName, this.secondAddress, this.secondAddressName);
 
   @override
@@ -61,9 +57,8 @@ class CustomDoubleButtons extends StatelessWidget {
                   color: customColor,
                   fontFamily: 'Comfortaa',
                   fontSize: 45.0,
-                  fontWeight: FontWeight.bold,)
-            )
-        ),
+                  fontWeight: FontWeight.bold,
+                ))),
         SizedBox(height: 20.0),
         SizedBox(
           width: 220.0,
@@ -79,9 +74,7 @@ class CustomDoubleButtons extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, firstAddress);
             },
-            child:  Text(firstAddressName,
-                style: MainMenu
-            ),
+            child: Text(firstAddressName, style: MainMenu),
           ),
         ),
         SizedBox(height: 20.0),
@@ -99,13 +92,10 @@ class CustomDoubleButtons extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, secondAddress);
             },
-            child:  Text(secondAddressName,
-                style: MainMenu
-            ),
+            child: Text(secondAddressName, style: MainMenu),
           ),
         ),
       ],
     );
   }
 }
-

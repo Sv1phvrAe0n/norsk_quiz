@@ -22,8 +22,7 @@ final progressTicker = TextStyle(
     color: Color(0xff231A31).withOpacity(0.5),
     fontFamily: 'Comfortaa',
     fontSize: 20.0,
-    fontWeight: FontWeight.bold
-);
+    fontWeight: FontWeight.bold);
 
 //GRAMMAR
 const MainGrammar = TextStyle(
@@ -41,13 +40,11 @@ const BoldGrammar = TextStyle(
 );
 
 const CursiveGrammar = TextStyle(
-  color: Color(0xff231A31),
-  fontFamily: 'Comfortaa',
-  fontSize: 17.0,
-  fontWeight: FontWeight.normal,
-  fontStyle: FontStyle.italic
-);
-
+    color: Color(0xff231A31),
+    fontFamily: 'Comfortaa',
+    fontSize: 17.0,
+    fontWeight: FontWeight.normal,
+    fontStyle: FontStyle.italic);
 
 const RegularText1 = TextStyle(
   color: Color(0xff231A31),
@@ -62,7 +59,6 @@ const BoldRegular1 = TextStyle(
   fontSize: 14.5,
   fontWeight: FontWeight.bold,
 );
-
 
 //DRAWER
 //13
@@ -85,8 +81,7 @@ const CursiveRegular = TextStyle(
     fontFamily: 'Comfortaa',
     fontSize: 13.0,
     fontWeight: FontWeight.normal,
-    fontStyle: FontStyle.italic
-);
+    fontStyle: FontStyle.italic);
 
 //12
 const BoldExceptions = TextStyle(

@@ -13,8 +13,7 @@ class _AdjectsGramState extends State<AdjectsGram> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child:
-      Scaffold(
+      child: Scaffold(
         backgroundColor: Color(0xffFFFFFF),
         appBar: MinimalAppBar('Grammar', '/a'),
         body: SingleChildScrollView(
@@ -31,19 +30,19 @@ class _AdjectsGramState extends State<AdjectsGram> {
                   SizedBox(height: 10),
                   RichText(
                       text: TextSpan(
-                        children: [
-                          TextSpan(text: 'Most adjectives add ', style: MainGrammar),
-                          TextSpan(text: '-t ', style: BoldGrammar),
-                          TextSpan(text: 'in the neuter and ', style: MainGrammar),
-                          TextSpan(text: '-e ', style: BoldGrammar),
-                          TextSpan(text: 'in the plural.', style: MainGrammar),
-                        ],
-                      )),
+                    children: [
+                      TextSpan(
+                          text: 'Most adjectives add ', style: MainGrammar),
+                      TextSpan(text: '-t ', style: BoldGrammar),
+                      TextSpan(text: 'in the neuter and ', style: MainGrammar),
+                      TextSpan(text: '-e ', style: BoldGrammar),
+                      TextSpan(text: 'in the plural.', style: MainGrammar),
+                    ],
+                  )),
                   SizedBox(height: 30),
                   Align(
                     alignment: Alignment.topLeft,
-                    child: Text('Attributive form',
-                        style: MainMenu),
+                    child: Text('Attributive form', style: MainMenu),
                   ),
                   SizedBox(height: 10),
                   Text(
@@ -83,8 +82,7 @@ class _AdjectsGramState extends State<AdjectsGram> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Femin',
-                                          style: MainGrammar),
+                                          text: 'Femin', style: MainGrammar),
                                     ],
                                   )),
                               SizedBox(height: 24),
@@ -93,8 +91,7 @@ class _AdjectsGramState extends State<AdjectsGram> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Neuter',
-                                          style: MainGrammar),
+                                          text: 'Neuter', style: MainGrammar),
                                     ],
                                   )),
                               SizedBox(height: 24),
@@ -103,8 +100,7 @@ class _AdjectsGramState extends State<AdjectsGram> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Plural',
-                                          style: MainGrammar),
+                                          text: 'Plural', style: MainGrammar),
                                     ],
                                   )),
                               SizedBox(height: 14),
@@ -130,51 +126,49 @@ class _AdjectsGramState extends State<AdjectsGram> {
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'En pen båt', style: MainGrammar),
-                                      TextSpan(
-                                          text: '\na nice boat', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(
+                                      text: 'En pen båt', style: MainGrammar),
+                                  TextSpan(
+                                      text: '\na nice boat',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'Ei pen veske', style: MainGrammar),
-                                      TextSpan(
-                                          text: '\na nice bag', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(
+                                      text: 'Ei pen veske', style: MainGrammar),
+                                  TextSpan(
+                                      text: '\na nice bag',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'Et pen', style: MainGrammar),
-                                      TextSpan(
-                                          text: 't ', style: BoldGrammar),
-                                      TextSpan(
-                                          text: 'hus', style: MainGrammar),
-                                      TextSpan(
-                                          text: '\na nice house', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Et pen', style: MainGrammar),
+                                  TextSpan(text: 't ', style: BoldGrammar),
+                                  TextSpan(text: 'hus', style: MainGrammar),
+                                  TextSpan(
+                                      text: '\na nice house',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'Pen', style: MainGrammar),
-                                      TextSpan(
-                                          text: 'e ', style: BoldGrammar),
-                                      TextSpan(
-                                          text: 'bilder', style: MainGrammar),
-                                      TextSpan(
-                                          text: '\nnice pictures', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Pen', style: MainGrammar),
+                                  TextSpan(text: 'e ', style: BoldGrammar),
+                                  TextSpan(text: 'bilder', style: MainGrammar),
+                                  TextSpan(
+                                      text: '\nnice pictures',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                             ],
                           ),
                         ),
@@ -200,67 +194,55 @@ class _AdjectsGramState extends State<AdjectsGram> {
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'Den pen', style: MainGrammar),
-                                      TextSpan(
-                                          text: 'e ', style: BoldGrammar),
-                                      TextSpan(
-                                          text: 'båt', style: MainGrammar),
-                                      TextSpan(
-                                          text: 'en', style: BoldGrammar),
-                                      TextSpan(
-                                          text: '\nthe nice boats', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Den pen', style: MainGrammar),
+                                  TextSpan(text: 'e ', style: BoldGrammar),
+                                  TextSpan(text: 'båt', style: MainGrammar),
+                                  TextSpan(text: 'en', style: BoldGrammar),
+                                  TextSpan(
+                                      text: '\nthe nice boats',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'Den pen', style: MainGrammar),
-                                      TextSpan(
-                                          text: 'e ', style: BoldGrammar),
-                                      TextSpan(
-                                          text: 'vesk', style: MainGrammar),
-                                      TextSpan(
-                                          text: 'a', style: BoldGrammar),
-                                      TextSpan(
-                                          text: '\nthe nice bag', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Den pen', style: MainGrammar),
+                                  TextSpan(text: 'e ', style: BoldGrammar),
+                                  TextSpan(text: 'vesk', style: MainGrammar),
+                                  TextSpan(text: 'a', style: BoldGrammar),
+                                  TextSpan(
+                                      text: '\nthe nice bag',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'Det pen', style: MainGrammar),
-                                      TextSpan(
-                                          text: 'e ', style: BoldGrammar),
-                                      TextSpan(
-                                          text: 'hus', style: MainGrammar),
-                                      TextSpan(
-                                          text: 'et', style: BoldGrammar),
-                                      TextSpan(
-                                          text: '\nthe nice houses', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Det pen', style: MainGrammar),
+                                  TextSpan(text: 'e ', style: BoldGrammar),
+                                  TextSpan(text: 'hus', style: MainGrammar),
+                                  TextSpan(text: 'et', style: BoldGrammar),
+                                  TextSpan(
+                                      text: '\nthe nice houses',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'de pen', style: MainGrammar),
-                                      TextSpan(
-                                          text: 'e ', style: BoldGrammar),
-                                      TextSpan(
-                                          text: 'bilde', style: MainGrammar),
-                                      TextSpan(
-                                          text: 'ne', style: BoldGrammar),
-                                      TextSpan(
-                                          text: '\nthe nice pictures', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'de pen', style: MainGrammar),
+                                  TextSpan(text: 'e ', style: BoldGrammar),
+                                  TextSpan(text: 'bilde', style: MainGrammar),
+                                  TextSpan(text: 'ne', style: BoldGrammar),
+                                  TextSpan(
+                                      text: '\nthe nice pictures',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                             ],
                           ),
                         ),
@@ -270,18 +252,20 @@ class _AdjectsGramState extends State<AdjectsGram> {
                   SizedBox(height: 30),
                   Align(
                     alignment: Alignment.topLeft,
-                    child: Text('Predicative form',
-                        style: MainMenu),
+                    child: Text('Predicative form', style: MainMenu),
                   ),
                   SizedBox(height: 10),
                   RichText(
                       text: TextSpan(
-                        children: [
-                          TextSpan(text: 'Below the adjectives are connected to the noun with the verb ', style: MainGrammar),
-                          TextSpan(text: 'å være ', style: BoldGrammar),
-                          TextSpan(text: '(to be):', style: MainGrammar),
-                        ],
-                      )),
+                    children: [
+                      TextSpan(
+                          text:
+                              'Below the adjectives are connected to the noun with the verb ',
+                          style: MainGrammar),
+                      TextSpan(text: 'å være ', style: BoldGrammar),
+                      TextSpan(text: '(to be):', style: MainGrammar),
+                    ],
+                  )),
                   SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -308,7 +292,8 @@ class _AdjectsGramState extends State<AdjectsGram> {
                               RichText(
                                   textAlign: TextAlign.center,
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Masculine', style: MainGrammar),
+                                    TextSpan(
+                                        text: 'Masculine', style: MainGrammar),
                                   ])),
                               SizedBox(height: 24),
                               RichText(
@@ -316,8 +301,7 @@ class _AdjectsGramState extends State<AdjectsGram> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Feminine',
-                                          style: MainGrammar),
+                                          text: 'Feminine', style: MainGrammar),
                                     ],
                                   )),
                               SizedBox(height: 24),
@@ -326,8 +310,7 @@ class _AdjectsGramState extends State<AdjectsGram> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Neuter',
-                                          style: MainGrammar),
+                                          text: 'Neuter', style: MainGrammar),
                                     ],
                                   )),
                               SizedBox(height: 24),
@@ -336,8 +319,7 @@ class _AdjectsGramState extends State<AdjectsGram> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Plural',
-                                          style: MainGrammar),
+                                          text: 'Plural', style: MainGrammar),
                                     ],
                                   )),
                               SizedBox(height: 14),
@@ -366,47 +348,53 @@ class _AdjectsGramState extends State<AdjectsGram> {
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'Stolen er brun', style: MainGrammar),
-                                      TextSpan(
-                                          text: '\nthe chair is brown', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(
+                                      text: 'Stolen er brun',
+                                      style: MainGrammar),
+                                  TextSpan(
+                                      text: '\nthe chair is brown',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'Senga er brun', style: MainGrammar),
-                                      TextSpan(
-                                          text: '\nthe bed is brown', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(
+                                      text: 'Senga er brun',
+                                      style: MainGrammar),
+                                  TextSpan(
+                                      text: '\nthe bed is brown',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'Bordet er brun', style: MainGrammar),
-                                      TextSpan(
-                                          text: 't', style: BoldGrammar),
-                                      TextSpan(
-                                          text: '\nthe table is brown', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(
+                                      text: 'Bordet er brun',
+                                      style: MainGrammar),
+                                  TextSpan(text: 't', style: BoldGrammar),
+                                  TextSpan(
+                                      text: '\nthe table is brown',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'Stolene er brun', style: MainGrammar),
-                                      TextSpan(
-                                          text: 'e', style: BoldGrammar),
-                                      TextSpan(
-                                          text: '\nthe chairs are brown', style: CursiveRegular)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(
+                                      text: 'Stolene er brun',
+                                      style: MainGrammar),
+                                  TextSpan(text: 'e', style: BoldGrammar),
+                                  TextSpan(
+                                      text: '\nthe chairs are brown',
+                                      style: CursiveRegular)
+                                ],
+                              )),
                             ],
                           ),
                         ),
@@ -428,11 +416,8 @@ class _AdjectsGramState extends State<AdjectsGram> {
                       onPressed: () {
                         Navigator.pushNamed(context, '/3q');
                       },
-                      child:  Text(
-                        'Practice',
-                        textAlign: TextAlign.center,
-                        style: MainMenu
-                      ),
+                      child: Text('Practice',
+                          textAlign: TextAlign.center, style: MainMenu),
                     ),
                   ),
                   SizedBox(height: 20),

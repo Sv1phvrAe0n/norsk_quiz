@@ -80,7 +80,8 @@ class _RulesState extends State<Rules> {
                                 children: [
                                   TextSpan(text: 'Ei ', style: BoldRegular),
                                   TextSpan(
-                                      text: 'jente (a girl)', style: RegularText),
+                                      text: 'jente (a girl)',
+                                      style: RegularText),
                                 ],
                               )),
                               SizedBox(height: 2),
@@ -89,7 +90,8 @@ class _RulesState extends State<Rules> {
                                 children: [
                                   TextSpan(text: 'Et ', style: BoldRegular),
                                   TextSpan(
-                                      text: 'hus (a house)', style: RegularText),
+                                      text: 'hus (a house)',
+                                      style: RegularText),
                                 ],
                               ))
                             ],
@@ -115,8 +117,8 @@ class _RulesState extends State<Rules> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child:
-                                    Text('Definite singular', style: BoldRegular),
+                                child: Text('Definite singular',
+                                    style: BoldRegular),
                               ),
                               SizedBox(height: 8.5),
                               RichText(
@@ -137,7 +139,8 @@ class _RulesState extends State<Rules> {
                                   text: TextSpan(children: [
                                 TextSpan(text: 'Hus', style: RegularText),
                                 TextSpan(text: 'et ', style: BoldRegular),
-                                TextSpan(text: '(the house)', style: RegularText)
+                                TextSpan(
+                                    text: '(the house)', style: RegularText)
                               ])),
                             ],
                           ),
@@ -200,8 +203,8 @@ class _RulesState extends State<Rules> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child:
-                                    Text('Indefinite plural', style: BoldRegular),
+                                child: Text('Indefinite plural',
+                                    style: BoldRegular),
                               ),
                               SizedBox(height: 8.5),
                               RichText(
@@ -277,7 +280,8 @@ class _RulesState extends State<Rules> {
                                   text: TextSpan(children: [
                                 TextSpan(text: 'Jente', style: RegularText),
                                 TextSpan(text: 'ne ', style: BoldRegular),
-                                TextSpan(text: '(the girls)', style: RegularText)
+                                TextSpan(
+                                    text: '(the girls)', style: RegularText)
                               ])),
                               SizedBox(height: 2),
                               RichText(
@@ -292,7 +296,8 @@ class _RulesState extends State<Rules> {
                                   text: TextSpan(children: [
                                 TextSpan(text: 'Hus', style: RegularText),
                                 TextSpan(text: 'ene ', style: BoldRegular),
-                                TextSpan(text: '(the houses)', style: RegularText)
+                                TextSpan(
+                                    text: '(the houses)', style: RegularText)
                               ])),
                             ],
                           ),
@@ -340,25 +345,29 @@ class _RulesState extends State<Rules> {
                               RichText(
                                   text: TextSpan(children: [
                                 TextSpan(text: 'En', style: BoldExceptions),
-                                TextSpan(text: ' onkel', style: RegularExceptions),
+                                TextSpan(
+                                    text: ' onkel', style: RegularExceptions),
                               ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
                                 TextSpan(text: 'En', style: BoldExceptions),
-                                TextSpan(text: ' sykkel', style: RegularExceptions),
+                                TextSpan(
+                                    text: ' sykkel', style: RegularExceptions),
                               ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
                                 TextSpan(text: 'En', style: BoldExceptions),
-                                TextSpan(text: ' nøkkel', style: RegularExceptions),
+                                TextSpan(
+                                    text: ' nøkkel', style: RegularExceptions),
                               ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
                                 TextSpan(text: 'Ei', style: BoldExceptions),
-                                TextSpan(text: ' natt', style: RegularExceptions)
+                                TextSpan(
+                                    text: ' natt', style: RegularExceptions)
                               ]))
                             ],
                           ),
@@ -386,25 +395,29 @@ class _RulesState extends State<Rules> {
                                 SizedBox(height: 8.5),
                                 RichText(
                                     text: TextSpan(children: [
-                                  TextSpan(text: 'Onkel', style: RegularExceptions),
+                                  TextSpan(
+                                      text: 'Onkel', style: RegularExceptions),
                                   TextSpan(text: 'en', style: BoldExceptions)
                                 ])),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
-                                  TextSpan(text: 'Sykkel', style: RegularExceptions),
+                                  TextSpan(
+                                      text: 'Sykkel', style: RegularExceptions),
                                   TextSpan(text: 'en', style: BoldExceptions)
                                 ])),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
-                                  TextSpan(text: 'Nøkkel', style: RegularExceptions),
+                                  TextSpan(
+                                      text: 'Nøkkel', style: RegularExceptions),
                                   TextSpan(text: 'en', style: BoldExceptions)
                                 ])),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
-                                  TextSpan(text: 'Natt', style: RegularExceptions),
+                                  TextSpan(
+                                      text: 'Natt', style: RegularExceptions),
                                   TextSpan(text: 'a', style: BoldExceptions)
                                 ]))
                               ]),
@@ -432,7 +445,8 @@ class _RulesState extends State<Rules> {
                               RichText(
                                   text: TextSpan(
                                 children: [
-                                  TextSpan(text: 'Onkl', style: RegularExceptions),
+                                  TextSpan(
+                                      text: 'Onkl', style: RegularExceptions),
                                   TextSpan(text: 'er', style: BoldExceptions)
                                 ],
                               )),
@@ -440,7 +454,8 @@ class _RulesState extends State<Rules> {
                               RichText(
                                   text: TextSpan(
                                 children: [
-                                  TextSpan(text: 'Sykl', style: RegularExceptions),
+                                  TextSpan(
+                                      text: 'Sykl', style: RegularExceptions),
                                   TextSpan(text: 'er', style: BoldExceptions)
                                 ],
                               )),
@@ -448,7 +463,8 @@ class _RulesState extends State<Rules> {
                               RichText(
                                   text: TextSpan(
                                 children: [
-                                  TextSpan(text: 'Nøkl', style: RegularExceptions),
+                                  TextSpan(
+                                      text: 'Nøkl', style: RegularExceptions),
                                   TextSpan(text: 'er', style: BoldExceptions)
                                 ],
                               )),
@@ -456,7 +472,8 @@ class _RulesState extends State<Rules> {
                               RichText(
                                   text: TextSpan(
                                 children: [
-                                  TextSpan(text: 'Nett', style: RegularExceptions),
+                                  TextSpan(
+                                      text: 'Nett', style: RegularExceptions),
                                   TextSpan(text: 'er', style: BoldExceptions)
                                 ],
                               )),
@@ -482,31 +499,35 @@ class _RulesState extends State<Rules> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child:
-                                    Text('Definite\nplural', style: BoldExceptions),
+                                child: Text('Definite\nplural',
+                                    style: BoldExceptions),
                               ),
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(children: [
-                                TextSpan(text: 'Onkl', style: RegularExceptions),
+                                TextSpan(
+                                    text: 'Onkl', style: RegularExceptions),
                                 TextSpan(text: 'ene', style: BoldExceptions)
                               ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                TextSpan(text: 'Sykl', style: RegularExceptions),
+                                TextSpan(
+                                    text: 'Sykl', style: RegularExceptions),
                                 TextSpan(text: 'ene', style: BoldExceptions)
                               ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                TextSpan(text: 'Nøkl', style: RegularExceptions),
+                                TextSpan(
+                                    text: 'Nøkl', style: RegularExceptions),
                                 TextSpan(text: 'ene', style: BoldExceptions)
                               ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                TextSpan(text: 'Nett', style: RegularExceptions),
+                                TextSpan(
+                                    text: 'Nett', style: RegularExceptions),
                                 TextSpan(text: 'ene ', style: BoldExceptions)
                               ])),
                             ],
@@ -553,27 +574,30 @@ class _RulesState extends State<Rules> {
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'En', style: BoldExceptions),
-                                    TextSpan(text: ' jeger', style: RegularExceptions),
-                                  ])),
+                                TextSpan(text: 'En', style: BoldExceptions),
+                                TextSpan(
+                                    text: ' jeger', style: RegularExceptions),
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Ei', style: BoldExceptions),
-                                    TextSpan(text: ' bok', style: RegularExceptions),
-                                  ])),
+                                TextSpan(text: 'Ei', style: BoldExceptions),
+                                TextSpan(
+                                    text: ' bok', style: RegularExceptions),
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Ei', style: BoldExceptions),
-                                    TextSpan(text: ' hånd', style: RegularExceptions),
-                                  ])),
+                                TextSpan(text: 'Ei', style: BoldExceptions),
+                                TextSpan(
+                                    text: ' hånd', style: RegularExceptions),
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Et', style: BoldExceptions),
-                                    TextSpan(text: ' tre', style: RegularExceptions)
-                                  ]))
+                                TextSpan(text: 'Et', style: BoldExceptions),
+                                TextSpan(text: ' tre', style: RegularExceptions)
+                              ]))
                             ],
                           ),
                         ),
@@ -600,27 +624,31 @@ class _RulesState extends State<Rules> {
                                 SizedBox(height: 8.5),
                                 RichText(
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'Jeger', style: RegularExceptions),
-                                      TextSpan(text: 'en', style: BoldExceptions)
-                                    ])),
+                                  TextSpan(
+                                      text: 'Jeger', style: RegularExceptions),
+                                  TextSpan(text: 'en', style: BoldExceptions)
+                                ])),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'Bok', style: RegularExceptions),
-                                      TextSpan(text: 'a', style: BoldExceptions)
-                                    ])),
+                                  TextSpan(
+                                      text: 'Bok', style: RegularExceptions),
+                                  TextSpan(text: 'a', style: BoldExceptions)
+                                ])),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'hånd', style: RegularExceptions),
-                                      TextSpan(text: 'a', style: BoldExceptions)
-                                    ])),
+                                  TextSpan(
+                                      text: 'hånd', style: RegularExceptions),
+                                  TextSpan(text: 'a', style: BoldExceptions)
+                                ])),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'Tre', style: RegularExceptions),
-                                      TextSpan(text: 'et', style: BoldExceptions)
-                                    ]))
+                                  TextSpan(
+                                      text: 'Tre', style: RegularExceptions),
+                                  TextSpan(text: 'et', style: BoldExceptions)
+                                ]))
                               ]),
                         ),
                       ),
@@ -645,34 +673,38 @@ class _RulesState extends State<Rules> {
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Jeger', style: RegularExceptions),
-                                      TextSpan(text: 'e', style: BoldExceptions)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(
+                                      text: 'Jeger', style: RegularExceptions),
+                                  TextSpan(text: 'e', style: BoldExceptions)
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Bøk', style: RegularExceptions),
-                                      TextSpan(text: 'er ', style: BoldExceptions)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(
+                                      text: 'Bøk', style: RegularExceptions),
+                                  TextSpan(text: 'er ', style: BoldExceptions)
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Hend', style: RegularExceptions),
-                                      TextSpan(text: 'er', style: BoldExceptions)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(
+                                      text: 'Hend', style: RegularExceptions),
+                                  TextSpan(text: 'er', style: BoldExceptions)
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Trær', style: RegularExceptions)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(
+                                      text: 'Trær', style: RegularExceptions)
+                                ],
+                              )),
                             ],
                           ),
                         ),
@@ -695,33 +727,36 @@ class _RulesState extends State<Rules> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child:
-                                Text('Definite\nplural', style: BoldExceptions),
+                                child: Text('Definite\nplural',
+                                    style: BoldExceptions),
                               ),
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Jeger', style: RegularExceptions),
-                                    TextSpan(text: 'ne', style: BoldExceptions)
-                                  ])),
+                                TextSpan(
+                                    text: 'Jeger', style: RegularExceptions),
+                                TextSpan(text: 'ne', style: BoldExceptions)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Bøk', style: RegularExceptions),
-                                    TextSpan(text: 'ene', style: BoldExceptions)
-                                  ])),
+                                TextSpan(text: 'Bøk', style: RegularExceptions),
+                                TextSpan(text: 'ene', style: BoldExceptions)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Hend', style: RegularExceptions),
-                                    TextSpan(text: 'ene', style: BoldExceptions)
-                                  ])),
+                                TextSpan(
+                                    text: 'Hend', style: RegularExceptions),
+                                TextSpan(text: 'ene', style: BoldExceptions)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Trær', style: RegularExceptions),
-                                    TextSpan(text: 'ne', style: BoldExceptions)
-                                  ])),
+                                TextSpan(
+                                    text: 'Trær', style: RegularExceptions),
+                                TextSpan(text: 'ne', style: BoldExceptions)
+                              ])),
                             ],
                           ),
                         ),

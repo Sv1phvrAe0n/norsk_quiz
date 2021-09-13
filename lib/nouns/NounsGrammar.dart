@@ -13,13 +13,12 @@ class _NounsGramState extends State<NounsGram> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child:
-      Scaffold(
+      child: Scaffold(
         backgroundColor: Color(0xffFFFFFF),
-        appBar: MinimalAppBar('Grammar','/n'),
+        appBar: MinimalAppBar('Grammar', '/n'),
         body: SingleChildScrollView(
           child: Container(
-            color: Color(0xffFFFFFF),
+              color: Color(0xffFFFFFF),
               padding: EdgeInsets.all(8.0),
               child: Column(
                 children: [
@@ -31,8 +30,8 @@ class _NounsGramState extends State<NounsGram> {
                   SizedBox(height: 10),
                   Text(
                       'Nouns in Norwegian Bokmål technically have two genders: masculine and neuter. '
-                          '\nThere is also a feminine form, '
-                          'but it\'s not a mistake to write them in masculine form. ',
+                      '\nThere is also a feminine form, '
+                      'but it\'s not a mistake to write them in masculine form. ',
                       style: MainGrammar),
                   SizedBox(height: 30),
                   Align(
@@ -43,8 +42,8 @@ class _NounsGramState extends State<NounsGram> {
                   SizedBox(height: 10),
                   Text(
                       'Articles in Norwegian (En, Ei, Et) only apply to indefinite singular nouns. '
-                          '\nTo put a noun in definite form you simply add the correct suffix, which corresponds '
-                          'with the noun\'s indefinite article.',
+                      '\nTo put a noun in definite form you simply add the correct suffix, which corresponds '
+                      'with the noun\'s indefinite article.',
                       style: MainGrammar),
                   SizedBox(height: 10),
                   Row(
@@ -73,30 +72,32 @@ class _NounsGramState extends State<NounsGram> {
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'En ', style: BoldGrammar),
-                                      TextSpan(
-                                          text: 'bil (a car)', style: MainGrammar),
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'En ', style: BoldGrammar),
+                                  TextSpan(
+                                      text: 'bil (a car)', style: MainGrammar),
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Ei ', style: BoldGrammar),
-                                      TextSpan(
-                                          text: 'jente (a girl)', style: MainGrammar),
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Ei ', style: BoldGrammar),
+                                  TextSpan(
+                                      text: 'jente (a girl)',
+                                      style: MainGrammar),
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Et ', style: BoldGrammar),
-                                      TextSpan(
-                                          text: 'hus (a house)', style: MainGrammar),
-                                    ],
-                                  ))
+                                children: [
+                                  TextSpan(text: 'Et ', style: BoldGrammar),
+                                  TextSpan(
+                                      text: 'hus (a house)',
+                                      style: MainGrammar),
+                                ],
+                              ))
                             ],
                           ),
                         ),
@@ -120,30 +121,31 @@ class _NounsGramState extends State<NounsGram> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child:
-                                Text('Definite singular', style: BoldGrammar),
+                                child: Text('Definite singular',
+                                    style: BoldGrammar),
                               ),
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Bil', style: MainGrammar),
-                                    TextSpan(text: 'en ', style: BoldGrammar),
-                                    TextSpan(text: '(the car)', style: MainGrammar)
-                                  ])),
+                                TextSpan(text: 'Bil', style: MainGrammar),
+                                TextSpan(text: 'en ', style: BoldGrammar),
+                                TextSpan(text: '(the car)', style: MainGrammar)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Jent', style: MainGrammar),
-                                    TextSpan(text: 'a ', style: BoldGrammar),
-                                    TextSpan(text: '(the girl)', style: MainGrammar)
-                                  ])),
+                                TextSpan(text: 'Jent', style: MainGrammar),
+                                TextSpan(text: 'a ', style: BoldGrammar),
+                                TextSpan(text: '(the girl)', style: MainGrammar)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Hus', style: MainGrammar),
-                                    TextSpan(text: 'et ', style: BoldGrammar),
-                                    TextSpan(text: '(the house)', style: MainGrammar)
-                                  ])),
+                                TextSpan(text: 'Hus', style: MainGrammar),
+                                TextSpan(text: 'et ', style: BoldGrammar),
+                                TextSpan(
+                                    text: '(the house)', style: MainGrammar)
+                              ])),
                             ],
                           ),
                         ),
@@ -159,31 +161,31 @@ class _NounsGramState extends State<NounsGram> {
                   SizedBox(height: 10),
                   RichText(
                       text: TextSpan(children: [
-                        TextSpan(
-                            text:
+                    TextSpan(
+                        text:
                             'Plural indefinite nouns are normally formed by adding ',
-                            style: MainGrammar),
-                        TextSpan(text: '-er ', style: BoldGrammar),
-                        TextSpan(
-                            text:
+                        style: MainGrammar),
+                    TextSpan(text: '-er ', style: BoldGrammar),
+                    TextSpan(
+                        text:
                             'in the end of the word.\nIf the singular indefinite form ends with -e, you only add ',
-                            style: MainGrammar),
-                        TextSpan(text: '-r ', style: BoldGrammar),
-                        TextSpan(
-                            text:
+                        style: MainGrammar),
+                    TextSpan(text: '-r ', style: BoldGrammar),
+                    TextSpan(
+                        text:
                             'in the end of the word.\n\nShort neuter nouns (that end with -et in singular form) take ',
-                            style: MainGrammar),
-                        TextSpan(text: 'no ending ', style: BoldGrammar),
-                        TextSpan(
-                            text:
+                        style: MainGrammar),
+                    TextSpan(text: 'no ending ', style: BoldGrammar),
+                    TextSpan(
+                        text:
                             'in the indefinite form plural.\n\nPlural definite nouns are formed by adding ',
-                            style: MainGrammar),
-                        TextSpan(text: '-ene', style: BoldGrammar),
-                        TextSpan(
-                            text:
+                        style: MainGrammar),
+                    TextSpan(text: '-ene', style: BoldGrammar),
+                    TextSpan(
+                        text:
                             '. The phonetic rules are the same as with the indefinite form.',
-                            style: MainGrammar),
-                      ])),
+                        style: MainGrammar),
+                  ])),
                   SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -205,45 +207,45 @@ class _NounsGramState extends State<NounsGram> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child:
-                                Text('Indefinite plural', style: BoldGrammar),
+                                child: Text('Indefinite plural',
+                                    style: BoldGrammar),
                               ),
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Bil', style: MainGrammar),
-                                      TextSpan(text: 'er ', style: BoldGrammar),
-                                      TextSpan(text: '(cars)', style: MainGrammar),
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Bil', style: MainGrammar),
+                                  TextSpan(text: 'er ', style: BoldGrammar),
+                                  TextSpan(text: '(cars)', style: MainGrammar),
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Jente', style: MainGrammar),
-                                      TextSpan(text: 'r ', style: BoldGrammar),
-                                      TextSpan(text: '(girls)', style: MainGrammar),
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Jente', style: MainGrammar),
+                                  TextSpan(text: 'r ', style: BoldGrammar),
+                                  TextSpan(text: '(girls)', style: MainGrammar),
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Bilde', style: MainGrammar),
-                                      TextSpan(text: 'r ', style: BoldGrammar),
-                                      TextSpan(
-                                          text: '(pictures)', style: MainGrammar),
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Bilde', style: MainGrammar),
+                                  TextSpan(text: 'r ', style: BoldGrammar),
+                                  TextSpan(
+                                      text: '(pictures)', style: MainGrammar),
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                          text: 'Hus (houses)', style: MainGrammar),
-                                    ],
-                                  ))
+                                children: [
+                                  TextSpan(
+                                      text: 'Hus (houses)', style: MainGrammar),
+                                ],
+                              ))
                             ],
                           ),
                         ),
@@ -268,37 +270,39 @@ class _NounsGramState extends State<NounsGram> {
                               Align(
                                 alignment: Alignment.topLeft,
                                 child:
-                                Text('Definite plural', style: BoldGrammar),
+                                    Text('Definite plural', style: BoldGrammar),
                               ),
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Bil', style: MainGrammar),
-                                    TextSpan(text: 'ene ', style: BoldGrammar),
-                                    TextSpan(text: '(the cars)', style: MainGrammar)
-                                  ])),
+                                TextSpan(text: 'Bil', style: MainGrammar),
+                                TextSpan(text: 'ene ', style: BoldGrammar),
+                                TextSpan(text: '(the cars)', style: MainGrammar)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Jente', style: MainGrammar),
-                                    TextSpan(text: 'ne ', style: BoldGrammar),
-                                    TextSpan(text: '(the girls)', style: MainGrammar)
-                                  ])),
+                                TextSpan(text: 'Jente', style: MainGrammar),
+                                TextSpan(text: 'ne ', style: BoldGrammar),
+                                TextSpan(
+                                    text: '(the girls)', style: MainGrammar)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Bilde', style: MainGrammar),
-                                    TextSpan(text: 'ne ', style: BoldGrammar),
-                                    TextSpan(
-                                        text: '(the pictures)', style: MainGrammar)
-                                  ])),
+                                TextSpan(text: 'Bilde', style: MainGrammar),
+                                TextSpan(text: 'ne ', style: BoldGrammar),
+                                TextSpan(
+                                    text: '(the pictures)', style: MainGrammar)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Hus', style: MainGrammar),
-                                    TextSpan(text: 'ene ', style: BoldGrammar),
-                                    TextSpan(text: '(the houses)', style: MainGrammar)
-                                  ])),
+                                TextSpan(text: 'Hus', style: MainGrammar),
+                                TextSpan(text: 'ene ', style: BoldGrammar),
+                                TextSpan(
+                                    text: '(the houses)', style: MainGrammar)
+                              ])),
                             ],
                           ),
                         ),
@@ -308,16 +312,16 @@ class _NounsGramState extends State<NounsGram> {
                   SizedBox(height: 10),
                   RichText(
                       text: TextSpan(children: [
-                        TextSpan(
-                            text:
+                    TextSpan(
+                        text:
                             'For sonic reasons, some words are modified significantly when the ',
-                            style: MainGrammar),
-                        TextSpan(text: '-er/-ene ', style: BoldGrammar),
-                        TextSpan(
-                            text:
+                        style: MainGrammar),
+                    TextSpan(text: '-er/-ene ', style: BoldGrammar),
+                    TextSpan(
+                        text:
                             'are added. Try to learn them by heart and understand the common pattern.',
-                            style: MainGrammar),
-                      ])),
+                        style: MainGrammar),
+                  ])),
                   SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -346,21 +350,21 @@ class _NounsGramState extends State<NounsGram> {
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'En', style: BoldGrammar),
-                                    TextSpan(text: ' onkel', style: MainGrammar),
-                                  ])),
+                                TextSpan(text: 'En', style: BoldGrammar),
+                                TextSpan(text: ' onkel', style: MainGrammar),
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'En', style: BoldGrammar),
-                                    TextSpan(text: ' sykkel', style: MainGrammar),
-                                  ])),
+                                TextSpan(text: 'En', style: BoldGrammar),
+                                TextSpan(text: ' sykkel', style: MainGrammar),
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Ei', style: BoldGrammar),
-                                    TextSpan(text: ' natt', style: MainGrammar)
-                                  ]))
+                                TextSpan(text: 'Ei', style: BoldGrammar),
+                                TextSpan(text: ' natt', style: MainGrammar)
+                              ]))
                             ],
                           ),
                         ),
@@ -387,21 +391,21 @@ class _NounsGramState extends State<NounsGram> {
                                 SizedBox(height: 8.5),
                                 RichText(
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'Onkel', style: MainGrammar),
-                                      TextSpan(text: 'en', style: BoldGrammar)
-                                    ])),
+                                  TextSpan(text: 'Onkel', style: MainGrammar),
+                                  TextSpan(text: 'en', style: BoldGrammar)
+                                ])),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'Sykkel', style: MainGrammar),
-                                      TextSpan(text: 'en', style: BoldGrammar)
-                                    ])),
+                                  TextSpan(text: 'Sykkel', style: MainGrammar),
+                                  TextSpan(text: 'en', style: BoldGrammar)
+                                ])),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'Natt', style: MainGrammar),
-                                      TextSpan(text: 'a', style: BoldGrammar)
-                                    ]))
+                                  TextSpan(text: 'Natt', style: MainGrammar),
+                                  TextSpan(text: 'a', style: BoldGrammar)
+                                ]))
                               ]),
                         ),
                       ),
@@ -424,27 +428,27 @@ class _NounsGramState extends State<NounsGram> {
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Onkl', style: MainGrammar),
-                                      TextSpan(text: 'er', style: BoldGrammar)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Onkl', style: MainGrammar),
+                                  TextSpan(text: 'er', style: BoldGrammar)
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Sykl', style: MainGrammar),
-                                      TextSpan(text: 'er', style: BoldGrammar)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Sykl', style: MainGrammar),
+                                  TextSpan(text: 'er', style: BoldGrammar)
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Nett', style: MainGrammar),
-                                      TextSpan(text: 'er', style: BoldGrammar)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Nett', style: MainGrammar),
+                                  TextSpan(text: 'er', style: BoldGrammar)
+                                ],
+                              )),
                             ],
                           ),
                         ),
@@ -466,27 +470,27 @@ class _NounsGramState extends State<NounsGram> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child:
-                                Text('Definite\nplural', style: BoldGrammar),
+                                child: Text('Definite\nplural',
+                                    style: BoldGrammar),
                               ),
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Onkl', style: MainGrammar),
-                                    TextSpan(text: 'ene', style: BoldGrammar)
-                                  ])),
+                                TextSpan(text: 'Onkl', style: MainGrammar),
+                                TextSpan(text: 'ene', style: BoldGrammar)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Sykl', style: MainGrammar),
-                                    TextSpan(text: 'ene', style: BoldGrammar)
-                                  ])),
+                                TextSpan(text: 'Sykl', style: MainGrammar),
+                                TextSpan(text: 'ene', style: BoldGrammar)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Nett', style: MainGrammar),
-                                    TextSpan(text: 'ene ', style: BoldGrammar)
-                                  ])),
+                                TextSpan(text: 'Nett', style: MainGrammar),
+                                TextSpan(text: 'ene ', style: BoldGrammar)
+                              ])),
                             ],
                           ),
                         ),
@@ -501,7 +505,7 @@ class _NounsGramState extends State<NounsGram> {
                   SizedBox(height: 10),
                   Text(
                       'In most cases the noun inflection goes according '
-                          'to its gender as described above. However, there are many exceptions.',
+                      'to its gender as described above. However, there are many exceptions.',
                       style: MainGrammar),
                   SizedBox(height: 10),
                   Row(
@@ -531,27 +535,27 @@ class _NounsGramState extends State<NounsGram> {
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'En', style: BoldGrammar),
-                                    TextSpan(text: ' jeger', style: MainGrammar),
-                                  ])),
+                                TextSpan(text: 'En', style: BoldGrammar),
+                                TextSpan(text: ' jeger', style: MainGrammar),
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Ei', style: BoldGrammar),
-                                    TextSpan(text: ' bok', style: MainGrammar),
-                                  ])),
+                                TextSpan(text: 'Ei', style: BoldGrammar),
+                                TextSpan(text: ' bok', style: MainGrammar),
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Ei', style: BoldGrammar),
-                                    TextSpan(text: ' hånd', style: MainGrammar),
-                                  ])),
+                                TextSpan(text: 'Ei', style: BoldGrammar),
+                                TextSpan(text: ' hånd', style: MainGrammar),
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Et', style: BoldGrammar),
-                                    TextSpan(text: ' tre', style: MainGrammar)
-                                  ]))
+                                TextSpan(text: 'Et', style: BoldGrammar),
+                                TextSpan(text: ' tre', style: MainGrammar)
+                              ]))
                             ],
                           ),
                         ),
@@ -578,27 +582,27 @@ class _NounsGramState extends State<NounsGram> {
                                 SizedBox(height: 8.5),
                                 RichText(
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'Jeger', style: MainGrammar),
-                                      TextSpan(text: 'en', style: BoldGrammar)
-                                    ])),
+                                  TextSpan(text: 'Jeger', style: MainGrammar),
+                                  TextSpan(text: 'en', style: BoldGrammar)
+                                ])),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'Bok', style: MainGrammar),
-                                      TextSpan(text: 'a', style: BoldGrammar)
-                                    ])),
+                                  TextSpan(text: 'Bok', style: MainGrammar),
+                                  TextSpan(text: 'a', style: BoldGrammar)
+                                ])),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'hånd', style: MainGrammar),
-                                      TextSpan(text: 'a', style: BoldGrammar)
-                                    ])),
+                                  TextSpan(text: 'hånd', style: MainGrammar),
+                                  TextSpan(text: 'a', style: BoldGrammar)
+                                ])),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'Tre', style: MainGrammar),
-                                      TextSpan(text: 'et', style: BoldGrammar)
-                                    ]))
+                                  TextSpan(text: 'Tre', style: MainGrammar),
+                                  TextSpan(text: 'et', style: BoldGrammar)
+                                ]))
                               ]),
                         ),
                       ),
@@ -623,34 +627,34 @@ class _NounsGramState extends State<NounsGram> {
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Jeger', style: MainGrammar),
-                                      TextSpan(text: 'e', style: BoldGrammar)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Jeger', style: MainGrammar),
+                                  TextSpan(text: 'e', style: BoldGrammar)
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Bøk', style: MainGrammar),
-                                      TextSpan(text: 'er ', style: BoldGrammar)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Bøk', style: MainGrammar),
+                                  TextSpan(text: 'er ', style: BoldGrammar)
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Hend', style: MainGrammar),
-                                      TextSpan(text: 'er', style: BoldGrammar)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Hend', style: MainGrammar),
+                                  TextSpan(text: 'er', style: BoldGrammar)
+                                ],
+                              )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
-                                    children: [
-                                      TextSpan(text: 'Trær', style: MainGrammar)
-                                    ],
-                                  )),
+                                children: [
+                                  TextSpan(text: 'Trær', style: MainGrammar)
+                                ],
+                              )),
                             ],
                           ),
                         ),
@@ -673,33 +677,33 @@ class _NounsGramState extends State<NounsGram> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child:
-                                Text('Definite\nplural', style: BoldGrammar),
+                                child: Text('Definite\nplural',
+                                    style: BoldGrammar),
                               ),
                               SizedBox(height: 8.5),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Jeger', style: MainGrammar),
-                                    TextSpan(text: 'ne', style: BoldGrammar)
-                                  ])),
+                                TextSpan(text: 'Jeger', style: MainGrammar),
+                                TextSpan(text: 'ne', style: BoldGrammar)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Bøk', style: MainGrammar),
-                                    TextSpan(text: 'ene', style: BoldGrammar)
-                                  ])),
+                                TextSpan(text: 'Bøk', style: MainGrammar),
+                                TextSpan(text: 'ene', style: BoldGrammar)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Hend', style: MainGrammar),
-                                    TextSpan(text: 'ene', style: BoldGrammar)
-                                  ])),
+                                TextSpan(text: 'Hend', style: MainGrammar),
+                                TextSpan(text: 'ene', style: BoldGrammar)
+                              ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Trær', style: MainGrammar),
-                                    TextSpan(text: 'ne', style: BoldGrammar)
-                                  ])),
+                                TextSpan(text: 'Trær', style: MainGrammar),
+                                TextSpan(text: 'ne', style: BoldGrammar)
+                              ])),
                             ],
                           ),
                         ),
@@ -721,11 +725,8 @@ class _NounsGramState extends State<NounsGram> {
                       onPressed: () {
                         Navigator.pushNamed(context, '/1q');
                       },
-                      child:  Text(
-                        'Practice',
-                        textAlign: TextAlign.center,
-                        style: MainMenu
-                      ),
+                      child: Text('Practice',
+                          textAlign: TextAlign.center, style: MainMenu),
                     ),
                   ),
                   SizedBox(height: 20),

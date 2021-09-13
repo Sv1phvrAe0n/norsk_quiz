@@ -5,7 +5,6 @@ import 'styles.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'customButtons.dart';
 
-
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -26,8 +25,7 @@ class _HomeState extends State<Home> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(0xffFFFFFF),
-        appBar:
-        AppBar(
+        appBar: AppBar(
           brightness: Brightness.dark,
           backgroundColor: Color(0xff231A31),
           title: Text(
@@ -59,9 +57,11 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
-                          child: TextButtons(Color(0xffC8CDE4), '/a', 'Adjectives')),
+                          child: TextButtons(
+                              Color(0xffC8CDE4), '/a', 'Adjectives')),
                       Expanded(
-                          child: TextButtons(Color(0xffB3A6C9), '/q', 'Questions')),
+                          child: TextButtons(
+                              Color(0xffB3A6C9), '/q', 'Questions')),
                     ],
                   ),
                 ],
@@ -72,16 +72,16 @@ class _HomeState extends State<Home> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 TextButton.icon(
-                  style: TextButton.styleFrom(
-                      backgroundColor: Color(0xffFFFFFF)),
+                  style:
+                      TextButton.styleFrom(backgroundColor: Color(0xffFFFFFF)),
                   onPressed: () => exit(0),
-                  icon: Icon(Icons.exit_to_app_rounded,
-                      color: Color(0xff392A50)),
+                  icon:
+                      Icon(Icons.exit_to_app_rounded, color: Color(0xff392A50)),
                   label: Text('Exit app', style: BoldGrammar),
                 ),
                 TextButton.icon(
-                  style: TextButton.styleFrom(
-                      backgroundColor: Color(0xffFFFFFF)),
+                  style:
+                      TextButton.styleFrom(backgroundColor: Color(0xffFFFFFF)),
                   onPressed: () => _launchURL(),
                   icon: Icon(Icons.mail_outline_rounded,
                       color: Color(0xff392A50)),

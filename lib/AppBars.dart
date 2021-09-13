@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
-class MinimalAppBar extends StatelessWidget implements PreferredSizeWidget{
-
+class MinimalAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String appBarName;
   final String navigatorAddress;
 
@@ -25,7 +23,8 @@ class MinimalAppBar extends StatelessWidget implements PreferredSizeWidget{
           fontFamily: 'Comfortaa',
         ),
       ),
-      leading: IconButton(icon: Icon(Icons.arrow_back_rounded),
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back_rounded),
         onPressed: () {
           Navigator.pushNamed(context, navigatorAddress);
         },
@@ -34,39 +33,37 @@ class MinimalAppBar extends StatelessWidget implements PreferredSizeWidget{
   }
 }
 
-
-
 class ExtendedAppBar extends MinimalAppBar {
-
-  ExtendedAppBar(appBarName, navigatorAddress) : super(appBarName, navigatorAddress);
+  ExtendedAppBar(appBarName, navigatorAddress)
+      : super(appBarName, navigatorAddress);
   @override
   Widget build(BuildContext context) {
-    return
-      AppBar(
-        centerTitle: true,
-        brightness: Brightness.dark,
-        title: Text(
-          appBarName,
-          style: TextStyle(
-            color: Color(0xffFFFFFF),
-            fontFamily: 'Comfortaa',
+    return AppBar(
+      centerTitle: true,
+      brightness: Brightness.dark,
+      title: Text(
+        appBarName,
+        style: TextStyle(
+          color: Color(0xffFFFFFF),
+          fontFamily: 'Comfortaa',
+        ),
+      ),
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back_rounded),
+        onPressed: () {
+          Navigator.pushNamed(context, navigatorAddress);
+        },
+      ),
+      backgroundColor: Color(0xff231A31),
+      actions: [
+        Builder(
+          builder: (context) => IconButton(
+            icon: Icon(Icons.menu_book_rounded),
+            onPressed: () => Scaffold.of(context).openEndDrawer(),
+            tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
           ),
         ),
-        leading: IconButton(icon: Icon(Icons.arrow_back_rounded),
-          onPressed: () {
-            Navigator.pushNamed(context, navigatorAddress);
-          },
-        ),
-        backgroundColor: Color(0xff231A31),
-        actions: [
-          Builder(
-            builder: (context) => IconButton(
-              icon: Icon(Icons.menu_book_rounded),
-              onPressed: () => Scaffold.of(context).openEndDrawer(),
-              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-            ),
-          ),
-        ],
-      );
+      ],
+    );
   }
 }
