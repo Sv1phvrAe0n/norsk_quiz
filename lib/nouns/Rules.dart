@@ -28,7 +28,7 @@ class _RulesState extends State<Rules> {
                       'Nouns in Norwegian Bokmål technically have two genders: masculine and neuter. '
                       '\nThere is also a feminine form, '
                       'but it\'s not a mistake to write them in masculine form. ',
-                      style: RegularText),
+                      style: RegularText1),
                   SizedBox(height: 30),
                   Align(
                     alignment: Alignment.topLeft,
@@ -40,7 +40,7 @@ class _RulesState extends State<Rules> {
                       'Articles in Norwegian (En, Ei, Et) only apply to indefinite singular nouns. '
                       '\nTo put a noun in definite form you simply add the correct suffix, which corresponds '
                       'with the noun\'s indefinite article.',
-                      style: RegularText),
+                      style: RegularText1),
                   SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -69,17 +69,6 @@ class _RulesState extends State<Rules> {
                               RichText(
                                   text: TextSpan(
                                 children: [
-                                  // WidgetSpan(
-                                  //   // alignment: PlaceholderAlignment.top,
-                                  //   child: Container(
-                                  //     alignment: Alignment.center,
-                                  //     padding: EdgeInsets.all(1.5),
-                                  //     height: 19,
-                                  //     width: 17,
-                                  //     child: Image.asset('images/male.png',
-                                  //         color: Color(0xff231A31)),
-                                  //   ),
-                                  // ),
                                   TextSpan(text: 'En ', style: BoldRegular),
                                   TextSpan(
                                       text: 'bil (a car)', style: RegularText),
@@ -89,18 +78,6 @@ class _RulesState extends State<Rules> {
                               RichText(
                                   text: TextSpan(
                                 children: [
-                                  // WidgetSpan(
-                                  //   // alignment: PlaceholderAlignment.middle,
-                                  //   child: Container(
-                                  //     alignment: Alignment.centerLeft,
-                                  //     padding: EdgeInsets.all(1.5),
-                                  //     height: 19,
-                                  //     width: 17,
-                                  //     child: Image.asset('images/female.png',
-                                  //     alignment: Alignment.bottomLeft,
-                                  //     color: Color(0xff231A31)),
-                                  //   ),
-                                  // ),
                                   TextSpan(text: 'Ei ', style: BoldRegular),
                                   TextSpan(
                                       text: 'jente (a girl)', style: RegularText),
@@ -110,18 +87,6 @@ class _RulesState extends State<Rules> {
                               RichText(
                                   text: TextSpan(
                                 children: [
-                                  // WidgetSpan(
-                                  //   // alignment: PlaceholderAlignment.middle,
-                                  //   child: Container(
-                                  //     alignment: Alignment.center,
-                                  //     padding: EdgeInsets.all(1.5),
-                                  //     height: 19,
-                                  //     width: 17,
-                                  //     child: Image.asset('images/neutral.png',
-                                  //         alignment: Alignment.topLeft,
-                                  //         color: Color(0xff231A31)),
-                                  //   ),
-                                  // ),
                                   TextSpan(text: 'Et ', style: BoldRegular),
                                   TextSpan(
                                       text: 'hus (a house)', style: RegularText),
@@ -192,27 +157,27 @@ class _RulesState extends State<Rules> {
                     TextSpan(
                         text:
                             'Plural indefinite nouns are normally formed by adding ',
-                        style: RegularText),
-                    TextSpan(text: '-er ', style: BoldRegular),
+                        style: RegularText1),
+                    TextSpan(text: '-er ', style: BoldRegular1),
                     TextSpan(
                         text:
                             'in the end of the word.\nIf the singular indefinite form ends with -e, you only add ',
-                        style: RegularText),
-                    TextSpan(text: '-r ', style: BoldRegular),
+                        style: RegularText1),
+                    TextSpan(text: '-r ', style: BoldRegular1),
                     TextSpan(
                         text:
                             'in the end of the word.\n\nShort neuter nouns (that end with -et in singular form) take ',
-                        style: RegularText),
-                    TextSpan(text: 'no ending ', style: BoldRegular),
+                        style: RegularText1),
+                    TextSpan(text: 'no ending ', style: BoldRegular1),
                     TextSpan(
                         text:
                             'in the indefinite form plural.\n\nPlural definite nouns are formed by adding ',
-                        style: RegularText),
-                    TextSpan(text: '-ene', style: BoldRegular),
+                        style: RegularText1),
+                    TextSpan(text: '-ene', style: BoldRegular1),
                     TextSpan(
                         text:
                             '. The phonetic rules are the same as with the indefinite form.',
-                        style: RegularText),
+                        style: RegularText1),
                   ])),
                   SizedBox(height: 10),
                   Row(
@@ -341,12 +306,12 @@ class _RulesState extends State<Rules> {
                     TextSpan(
                         text:
                             'For sonic reasons, some words are modified significantly when the ',
-                        style: RegularText),
-                    TextSpan(text: '-er/-ene ', style: BoldRegular),
+                        style: RegularText1),
+                    TextSpan(text: '-er/-ene ', style: BoldRegular1),
                     TextSpan(
                         text:
                             'are added. Try to learn them by heart and understand the common pattern.',
-                        style: RegularText),
+                        style: RegularText1),
                   ])),
                   SizedBox(height: 10),
                   Row(
@@ -360,8 +325,6 @@ class _RulesState extends State<Rules> {
                               bottomLeft: Radius.circular(10.0)),
                         ),
                         color: Color(0xffFDCFB2),
-                        // elevation: 3,
-                        // shadowColor: Color(0xffCEDDDF),
                         child: Padding(
                           padding: const EdgeInsets.all(7.0),
                           child: Column(
@@ -561,7 +524,7 @@ class _RulesState extends State<Rules> {
                   Text(
                       'In most cases the noun inflection goes according '
                       'to its gender as described above. However, there are many exceptions.',
-                      style: RegularText),
+                      style: RegularText1),
                   SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

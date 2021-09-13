@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:norsk_quiz/AppBars.dart';
 import 'package:norsk_quiz/styles.dart';
 
 class NounsGram extends StatefulWidget {
@@ -15,23 +16,7 @@ class _NounsGramState extends State<NounsGram> {
       child:
       Scaffold(
         backgroundColor: Color(0xffFFFFFF),
-        appBar: AppBar(
-          brightness: Brightness.dark,
-          backgroundColor: Color(0xff231A31),
-          title: Text(
-            'Grammar',
-            style: TextStyle(
-              color: Color(0xffFFFFFF),
-              fontFamily: 'Comfortaa',
-            ),
-          ),
-          centerTitle: true,
-          leading: IconButton(icon: Icon(Icons.arrow_back_rounded),
-            onPressed: () {
-              Navigator.pushNamed(context, '/n');
-            },
-          ),
-        ),
+        appBar: MinimalAppBar('Grammar','/n'),
         body: SingleChildScrollView(
           child: Container(
             color: Color(0xffFFFFFF),
@@ -370,12 +355,6 @@ class _NounsGramState extends State<NounsGram> {
                                     TextSpan(text: 'En', style: BoldGrammar),
                                     TextSpan(text: ' sykkel', style: MainGrammar),
                                   ])),
-                              // SizedBox(height: 2),
-                              // RichText(
-                              //     text: TextSpan(children: [
-                              //       TextSpan(text: 'En', style: BoldGrammar),
-                              //       TextSpan(text: ' nøkkel', style: MainGrammar),
-                              //     ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [
@@ -418,12 +397,6 @@ class _NounsGramState extends State<NounsGram> {
                                       TextSpan(text: 'en', style: BoldGrammar)
                                     ])),
                                 SizedBox(height: 2),
-                                // RichText(
-                                //     text: TextSpan(children: [
-                                //       TextSpan(text: 'Nøkkel', style: MainGrammar),
-                                //       TextSpan(text: 'en', style: BoldGrammar)
-                                //     ])),
-                                // SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(children: [
                                       TextSpan(text: 'Natt', style: MainGrammar),
@@ -438,8 +411,6 @@ class _NounsGramState extends State<NounsGram> {
                           borderRadius: BorderRadius.zero,
                         ),
                         color: Color(0xffC8CDE4),
-                        // elevation: 3,
-                        // shadowColor: Color(0xffCEDDDF),
                         child: Padding(
                           padding: const EdgeInsets.all(7.0),
                           child: Column(
@@ -466,14 +437,6 @@ class _NounsGramState extends State<NounsGram> {
                                       TextSpan(text: 'er', style: BoldGrammar)
                                     ],
                                   )),
-                              // SizedBox(height: 2),
-                              // RichText(
-                              //     text: TextSpan(
-                              //       children: [
-                              //         TextSpan(text: 'Nøkl', style: MainGrammar),
-                              //         TextSpan(text: 'er', style: BoldGrammar)
-                              //       ],
-                              //     )),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(
@@ -500,7 +463,6 @@ class _NounsGramState extends State<NounsGram> {
                           padding: const EdgeInsets.all(7.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
@@ -519,12 +481,6 @@ class _NounsGramState extends State<NounsGram> {
                                     TextSpan(text: 'Sykl', style: MainGrammar),
                                     TextSpan(text: 'ene', style: BoldGrammar)
                                   ])),
-                              // SizedBox(height: 2),
-                              // RichText(
-                              //     text: TextSpan(children: [
-                              //       TextSpan(text: 'Nøkl', style: MainGrammar),
-                              //       TextSpan(text: 'ene', style: BoldGrammar)
-                              //     ])),
                               SizedBox(height: 2),
                               RichText(
                                   text: TextSpan(children: [

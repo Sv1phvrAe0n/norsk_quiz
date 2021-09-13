@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:norsk_quiz/home.dart';
+import 'home.dart';
 
-import 'package:norsk_quiz/nouns/nouns.dart';
-import 'package:norsk_quiz/verbs/verbs.dart';
-import 'package:norsk_quiz/adjectives/adjectives.dart';
-import 'package:norsk_quiz/questions/questions.dart';
+import 'partsofspeech.dart';
 
-import 'package:norsk_quiz/nouns/1q.dart';
-import 'package:norsk_quiz/verbs/2q.dart';
-import 'package:norsk_quiz/adjectives/3q.dart';
-import 'package:norsk_quiz/questions/4q.dart';
+import 'nouns/1q.dart';
+import 'verbs/2q.dart';
+import 'adjectives/3q.dart';
+import 'questions/4q.dart';
 
-import 'package:norsk_quiz/nouns/NounsGrammar.dart';
-import 'package:norsk_quiz/verbs/VerbsGrammar.dart';
-import 'package:norsk_quiz/adjectives/AdjectivesGrammar.dart';
-import 'package:norsk_quiz/questions/QuestionGrammar.dart';
+import 'nouns/NounsGrammar.dart';
+import 'verbs/VerbsGrammar.dart';
+import 'adjectives/AdjectivesGrammar.dart';
+import 'questions/QuestionGrammar.dart';
 
 
 void main() {

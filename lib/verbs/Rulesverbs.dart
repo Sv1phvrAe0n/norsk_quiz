@@ -72,50 +72,50 @@ class _RulesVerbsState extends State<RulesVerbs> {
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'I ', style: RegularText1),
-                                        TextSpan(text: 'am', style: BoldRegular1),
+                                        TextSpan(text: 'I ', style: RegularText),
+                                        TextSpan(text: 'am', style: BoldRegular),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'You ', style: RegularText1),
+                                        TextSpan(text: 'You ', style: RegularText),
                                         TextSpan(text: '(singular) ', style: CursiveRegular),
-                                        TextSpan(text: 'are', style: BoldRegular1),
+                                        TextSpan(text: 'are', style: BoldRegular),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'You ', style: RegularText1),
+                                        TextSpan(text: 'You ', style: RegularText),
                                         TextSpan(text: '(plural) ', style: CursiveRegular),
-                                        TextSpan(text: 'are', style: BoldRegular1),
+                                        TextSpan(text: 'are', style: BoldRegular),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'He/she ', style: RegularText1),
-                                        TextSpan(text: 'is', style: BoldRegular1),
+                                        TextSpan(text: 'He/she ', style: RegularText),
+                                        TextSpan(text: 'is', style: BoldRegular),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'We ', style: RegularText1),
-                                        TextSpan(text: 'are', style: BoldRegular1),
+                                        TextSpan(text: 'We ', style: RegularText),
+                                        TextSpan(text: 'are', style: BoldRegular),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'They ', style: RegularText1),
-                                        TextSpan(text: 'are', style: BoldRegular1),
+                                        TextSpan(text: 'They ', style: RegularText),
+                                        TextSpan(text: 'are', style: BoldRegular),
                                       ],
                                     )),
                               ],
@@ -147,48 +147,48 @@ class _RulesVerbsState extends State<RulesVerbs> {
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'Jeg ', style: RegularText1),
-                                        TextSpan(text: 'er', style: BoldRegular1),
+                                        TextSpan(text: 'Jeg ', style: RegularText),
+                                        TextSpan(text: 'er', style: BoldRegular),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'Du ', style: RegularText1),
-                                        TextSpan(text: 'er', style: BoldRegular1),
+                                        TextSpan(text: 'Du ', style: RegularText),
+                                        TextSpan(text: 'er', style: BoldRegular),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'Dere ', style: RegularText1),
-                                        TextSpan(text: 'er', style: BoldRegular1),
+                                        TextSpan(text: 'Dere ', style: RegularText),
+                                        TextSpan(text: 'er', style: BoldRegular),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'Han/hun ', style: RegularText1),
-                                        TextSpan(text: 'er', style: BoldRegular1),
+                                        TextSpan(text: 'Han/hun ', style: RegularText),
+                                        TextSpan(text: 'er', style: BoldRegular),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'Vi ', style: RegularText1),
-                                        TextSpan(text: 'er', style: BoldRegular1),
+                                        TextSpan(text: 'Vi ', style: RegularText),
+                                        TextSpan(text: 'er', style: BoldRegular),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'De ', style: RegularText1),
-                                        TextSpan(text: 'er', style: BoldRegular1),
+                                        TextSpan(text: 'De ', style: RegularText),
+                                        TextSpan(text: 'er', style: BoldRegular),
                                       ],
                                     )),
                               ],
@@ -245,7 +245,7 @@ class _RulesVerbsState extends State<RulesVerbs> {
                           // elevation: 3,
                           // shadowColor: Color(0xffCEDDDF),
                           child: Padding(
-                            padding: const EdgeInsets.all(7.5),
+                            padding: const EdgeInsets.all(8.5),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -258,29 +258,21 @@ class _RulesVerbsState extends State<RulesVerbs> {
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'Infinitive', style: RegularText1)
+                                        TextSpan(text: 'Infinitive', style: RegularText)
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'Present', style: RegularText1),
+                                        TextSpan(text: 'Present', style: RegularText),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'Preterite', style: RegularText1),
-                                      ],
-                                    )),
-                                SizedBox(height: 2),
-                                RichText(
-                                    text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                            text: 'Present perfect', style: RegularText1),
+                                        TextSpan(text: 'Preterite', style: RegularText),
                                       ],
                                     )),
                                 SizedBox(height: 2),
@@ -288,7 +280,15 @@ class _RulesVerbsState extends State<RulesVerbs> {
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
-                                            text: 'Future simple', style: RegularText1),
+                                            text: 'Present perfect', style: RegularText),
+                                      ],
+                                    )),
+                                SizedBox(height: 2),
+                                RichText(
+                                    text: TextSpan(
+                                      children: [
+                                        TextSpan(
+                                            text: 'Future simple', style: RegularText),
                                       ],
                                     ))
                               ],
@@ -321,29 +321,21 @@ class _RulesVerbsState extends State<RulesVerbs> {
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'Infinitiv', style: RegularText1)
+                                        TextSpan(text: 'Infinitiv', style: RegularText)
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'Presens', style: RegularText1),
+                                        TextSpan(text: 'Presens', style: RegularText),
                                       ],
                                     )),
                                 SizedBox(height: 2),
                                 RichText(
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: 'Preteritum', style: RegularText1),
-                                      ],
-                                    )),
-                                SizedBox(height: 2),
-                                RichText(
-                                    text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                            text: 'Presens perfektum', style: RegularText1),
+                                        TextSpan(text: 'Preteritum', style: RegularText),
                                       ],
                                     )),
                                 SizedBox(height: 2),
@@ -351,7 +343,15 @@ class _RulesVerbsState extends State<RulesVerbs> {
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
-                                            text: 'Presens futurum', style: RegularText1),
+                                            text: 'Presens perfektum', style: RegularText),
+                                      ],
+                                    )),
+                                SizedBox(height: 2),
+                                RichText(
+                                    text: TextSpan(
+                                      children: [
+                                        TextSpan(
+                                            text: 'Presens futurum', style: RegularText),
                                       ],
                                     ))
                               ],

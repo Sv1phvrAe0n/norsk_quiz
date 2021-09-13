@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:norsk_quiz/AppBars.dart';
 import 'package:norsk_quiz/styles.dart';
 
 class VerbsGram extends StatefulWidget {
@@ -15,23 +16,7 @@ class _VerbsGramState extends State<VerbsGram> {
       child:
       Scaffold(
         backgroundColor: Color(0xffFFFFFF),
-        appBar: AppBar(
-          brightness: Brightness.dark,
-          backgroundColor: Color(0xff231A31),
-          title: Text(
-            'Grammar',
-            style: TextStyle(
-              color: Color(0xffFFFFFF),
-              fontFamily: 'Comfortaa',
-            ),
-          ),
-          centerTitle: true,
-          leading: IconButton(icon: Icon(Icons.arrow_back_rounded),
-            onPressed: () {
-              Navigator.pushNamed(context, '/v');
-            },
-          ),
-        ),
+        appBar: MinimalAppBar('Grammar', '/v'),
         body: SingleChildScrollView(
           child: Container(
               color: Color(0xffFFFFFF),

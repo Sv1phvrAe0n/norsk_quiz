@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:norsk_quiz/AppBars.dart';
 import 'package:norsk_quiz/styles.dart';
 
 class AdjectsGram extends StatefulWidget {
@@ -15,23 +16,7 @@ class _AdjectsGramState extends State<AdjectsGram> {
       child:
       Scaffold(
         backgroundColor: Color(0xffFFFFFF),
-        appBar: AppBar(
-          brightness: Brightness.dark,
-          backgroundColor: Color(0xff231A31),
-          title: Text(
-            'Grammar',
-            style: TextStyle(
-              color: Color(0xffFFFFFF),
-              fontFamily: 'Comfortaa',
-            ),
-          ),
-          centerTitle: true,
-          leading: IconButton(icon: Icon(Icons.arrow_back_rounded),
-            onPressed: () {
-              Navigator.pushNamed(context, '/a');
-            },
-          ),
-        ),
+        appBar: MinimalAppBar('Grammar', '/a'),
         body: SingleChildScrollView(
           child: Container(
               color: Color(0xffFFFFFF),
@@ -50,8 +35,8 @@ class _AdjectsGramState extends State<AdjectsGram> {
                           TextSpan(text: 'Most adjectives add ', style: MainGrammar),
                           TextSpan(text: '-t ', style: BoldGrammar),
                           TextSpan(text: 'in the neuter and ', style: MainGrammar),
-                          TextSpan(text: '-e ', style: MainGrammar),
-                          TextSpan(text: 'in the plural.', style: BoldGrammar),
+                          TextSpan(text: '-e ', style: BoldGrammar),
+                          TextSpan(text: 'in the plural.', style: MainGrammar),
                         ],
                       )),
                   SizedBox(height: 30),

@@ -21,17 +21,17 @@ class _RulesAdjectState extends State<RulesAdject> {
                   SizedBox(height: 10),
                   Align(
                     alignment: Alignment.topLeft,
-                    child: Text('Adjectives in Norwegian', style: MainMenu),
+                    child: Text('Adjectives in Norwegian', style: HeaderText),
                   ),
                   SizedBox(height: 10),
                   RichText(
                       text: TextSpan(
                         children: [
-                          TextSpan(text: 'Most adjectives add ', style: MainGrammar),
-                          TextSpan(text: '-t ', style: BoldGrammar),
-                          TextSpan(text: 'in the neuter and ', style: MainGrammar),
-                          TextSpan(text: '-e ', style: MainGrammar),
-                          TextSpan(text: 'in the plural.', style: BoldGrammar),
+                          TextSpan(text: 'Most adjectives add ', style: RegularText1),
+                          TextSpan(text: '-t ', style: BoldRegular1),
+                          TextSpan(text: 'in the neuter and ', style: RegularText1),
+                          TextSpan(text: '-e ', style: RegularText1),
+                          TextSpan(text: 'in the plural.', style: BoldRegular1),
                         ],
                       )),
                   SizedBox(height: 30),
@@ -43,7 +43,7 @@ class _RulesAdjectState extends State<RulesAdject> {
                   SizedBox(height: 10),
                   Text(
                       'Below the adjectives are placed in front of the nouns which they describe:',
-                      style: MainGrammar),
+                      style: RegularText1),
                   SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -63,14 +63,14 @@ class _RulesAdjectState extends State<RulesAdject> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child: Text('Indefinite', style: BoldGrammar),
+                                child: Text('Indefinite', style: BoldRegular1),
                               ),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'En pen båt', style: MainGrammar),
+                                          text: 'En pen båt', style: RegularText1),
                                       TextSpan(
                                           text: '\na nice boat', style: CursiveRegular)
                                     ],
@@ -80,7 +80,7 @@ class _RulesAdjectState extends State<RulesAdject> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Ei pen veske', style: MainGrammar),
+                                          text: 'Ei pen veske', style: RegularText1),
                                       TextSpan(
                                           text: '\na nice bag', style: CursiveRegular)
                                     ],
@@ -90,11 +90,11 @@ class _RulesAdjectState extends State<RulesAdject> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Et pen', style: MainGrammar),
+                                          text: 'Et pen', style: RegularText1),
                                       TextSpan(
-                                          text: 't ', style: BoldGrammar),
+                                          text: 't ', style: BoldRegular1),
                                       TextSpan(
-                                          text: 'hus', style: MainGrammar),
+                                          text: 'hus', style: RegularText1),
                                       TextSpan(
                                           text: '\na nice house', style: CursiveRegular)
                                     ],
@@ -104,11 +104,11 @@ class _RulesAdjectState extends State<RulesAdject> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Pen', style: MainGrammar),
+                                          text: 'Pen', style: RegularText1),
                                       TextSpan(
-                                          text: 'e ', style: BoldGrammar),
+                                          text: 'e ', style: BoldRegular1),
                                       TextSpan(
-                                          text: 'bilder', style: MainGrammar),
+                                          text: 'bilder', style: RegularText1),
                                       TextSpan(
                                           text: '\nnice pictures', style: CursiveRegular)
                                     ],
@@ -133,20 +133,20 @@ class _RulesAdjectState extends State<RulesAdject> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child: Text('Definite', style: BoldGrammar),
+                                child: Text('Definite', style: BoldRegular1),
                               ),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Den pen', style: MainGrammar),
+                                          text: 'Den pen', style: RegularText1),
                                       TextSpan(
-                                          text: 'e ', style: BoldGrammar),
+                                          text: 'e ', style: BoldRegular1),
                                       TextSpan(
-                                          text: 'båt', style: MainGrammar),
+                                          text: 'båt', style: RegularText1),
                                       TextSpan(
-                                          text: 'en', style: BoldGrammar),
+                                          text: 'en', style: BoldRegular1),
                                       TextSpan(
                                           text: '\nthe nice boats', style: CursiveRegular)
                                     ],
@@ -156,13 +156,13 @@ class _RulesAdjectState extends State<RulesAdject> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Den pen', style: MainGrammar),
+                                          text: 'Den pen', style: RegularText1),
                                       TextSpan(
-                                          text: 'e ', style: BoldGrammar),
+                                          text: 'e ', style: BoldRegular1),
                                       TextSpan(
-                                          text: 'vesk', style: MainGrammar),
+                                          text: 'vesk', style: RegularText1),
                                       TextSpan(
-                                          text: 'a', style: BoldGrammar),
+                                          text: 'a', style: BoldRegular1),
                                       TextSpan(
                                           text: '\nthe nice bag', style: CursiveRegular)
                                     ],
@@ -172,13 +172,13 @@ class _RulesAdjectState extends State<RulesAdject> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Det pen', style: MainGrammar),
+                                          text: 'Det pen', style: RegularText1),
                                       TextSpan(
-                                          text: 'e ', style: BoldGrammar),
+                                          text: 'e ', style: BoldRegular1),
                                       TextSpan(
-                                          text: 'hus', style: MainGrammar),
+                                          text: 'hus', style: RegularText1),
                                       TextSpan(
-                                          text: 'et', style: BoldGrammar),
+                                          text: 'et', style: BoldRegular1),
                                       TextSpan(
                                           text: '\nthe nice houses', style: CursiveRegular)
                                     ],
@@ -188,13 +188,13 @@ class _RulesAdjectState extends State<RulesAdject> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'de pen', style: MainGrammar),
+                                          text: 'de pen', style: RegularText1),
                                       TextSpan(
-                                          text: 'e ', style: BoldGrammar),
+                                          text: 'e ', style: BoldRegular1),
                                       TextSpan(
-                                          text: 'bilde', style: MainGrammar),
+                                          text: 'bilde', style: RegularText1),
                                       TextSpan(
-                                          text: 'ne', style: BoldGrammar),
+                                          text: 'ne', style: BoldRegular1),
                                       TextSpan(
                                           text: '\nthe nice pictures', style: CursiveRegular)
                                     ],
@@ -215,9 +215,9 @@ class _RulesAdjectState extends State<RulesAdject> {
                   RichText(
                       text: TextSpan(
                         children: [
-                          TextSpan(text: 'Below the adjectives are connected to the noun with the verb ', style: MainGrammar),
-                          TextSpan(text: 'å være ', style: BoldGrammar),
-                          TextSpan(text: '(to be):', style: MainGrammar),
+                          TextSpan(text: 'Below the adjectives are connected to the noun with the verb ', style: RegularText1),
+                          TextSpan(text: 'å være ', style: BoldRegular1),
+                          TextSpan(text: '(to be):', style: RegularText1),
                         ],
                       )),
                   SizedBox(height: 10),
@@ -240,13 +240,13 @@ class _RulesAdjectState extends State<RulesAdject> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child: Text('Form', style: BoldGrammar),
+                                child: Text('Form', style: BoldRegular1),
                               ),
                               SizedBox(height: 10),
                               RichText(
                                   textAlign: TextAlign.center,
                                   text: TextSpan(children: [
-                                    TextSpan(text: 'Masculine', style: MainGrammar),
+                                    TextSpan(text: 'Masculine', style: RegularText1),
                                   ])),
                               SizedBox(height: 24),
                               RichText(
@@ -255,7 +255,7 @@ class _RulesAdjectState extends State<RulesAdject> {
                                     children: [
                                       TextSpan(
                                           text: 'Feminine',
-                                          style: MainGrammar),
+                                          style: RegularText1),
                                     ],
                                   )),
                               SizedBox(height: 24),
@@ -265,7 +265,7 @@ class _RulesAdjectState extends State<RulesAdject> {
                                     children: [
                                       TextSpan(
                                           text: 'Neuter',
-                                          style: MainGrammar),
+                                          style: RegularText1),
                                     ],
                                   )),
                               SizedBox(height: 24),
@@ -275,7 +275,7 @@ class _RulesAdjectState extends State<RulesAdject> {
                                     children: [
                                       TextSpan(
                                           text: 'Plural',
-                                          style: MainGrammar),
+                                          style: RegularText1),
                                     ],
                                   )),
                               SizedBox(height: 14),
@@ -299,14 +299,14 @@ class _RulesAdjectState extends State<RulesAdject> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child: Text('Definite', style: BoldGrammar),
+                                child: Text('Definite', style: BoldRegular1),
                               ),
                               SizedBox(height: 10),
                               RichText(
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Stolen er brun', style: MainGrammar),
+                                          text: 'Stolen er brun', style: RegularText1),
                                       TextSpan(
                                           text: '\nthe chair is brown', style: CursiveRegular)
                                     ],
@@ -316,7 +316,7 @@ class _RulesAdjectState extends State<RulesAdject> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Senga er brun', style: MainGrammar),
+                                          text: 'Senga er brun', style: RegularText1),
                                       TextSpan(
                                           text: '\nthe bed is brown', style: CursiveRegular)
                                     ],
@@ -326,9 +326,9 @@ class _RulesAdjectState extends State<RulesAdject> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Bordet er brun', style: MainGrammar),
+                                          text: 'Bordet er brun', style: RegularText1),
                                       TextSpan(
-                                          text: 't', style: BoldGrammar),
+                                          text: 't', style: BoldRegular1),
                                       TextSpan(
                                           text: '\nthe table is brown', style: CursiveRegular)
                                     ],
@@ -338,9 +338,9 @@ class _RulesAdjectState extends State<RulesAdject> {
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                          text: 'Stolene er brun', style: MainGrammar),
+                                          text: 'Stolene er brun', style: RegularText1),
                                       TextSpan(
-                                          text: 'e', style: BoldGrammar),
+                                          text: 'e', style: BoldRegular1),
                                       TextSpan(
                                           text: '\nthe chairs are brown', style: CursiveRegular)
                                     ],

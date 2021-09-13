@@ -52,11 +52,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(7.5),
                             child: Text('Question word',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -66,11 +66,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(7.5),
                             child: Text('Verb',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -80,7 +80,7 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(7.5),
                             child: Text('The rest',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
@@ -265,11 +265,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.5),
                             child: Text('Question\nword\n+\nAdjective\nor\nAdverb',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -279,11 +279,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.5),
                             child: Text('Verb\nor\nNoun',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -293,7 +293,7 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.5),
                             child: Text('The rest',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
@@ -538,11 +538,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(6.0),
                             child: Text('Which',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -552,11 +552,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(6.0),
                             child: Text('Noun',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -566,11 +566,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(6.0),
                             child: Text('Verb',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -580,7 +580,7 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(6.0),
                             child: Text('The rest',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
@@ -726,11 +726,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.5),
                             child: Text('Which',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -740,11 +740,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.5),
                             child: Text('Verb',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -754,7 +754,7 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.5),
                             child: Text('The rest',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
@@ -819,11 +819,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.5),
                             child: Text('Verb',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -833,11 +833,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.5),
                             child: Text('Subject',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -847,7 +847,7 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.5),
                             child: Text('The rest',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
@@ -955,11 +955,11 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.5),
                             child: Text('Declarative sentence',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),
-                      Text(' + ', style: BoldRegular1),
+                      Text(' + ', style: BoldRegular),
                       Card(
                           margin: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
@@ -969,7 +969,7 @@ class _RulesQuestState extends State<RulesQuest> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.5),
                             child: Text('ikke sant?',
-                                style: BoldRegular1,
+                                style: BoldRegular,
                                 textAlign: TextAlign.center),
                           )
                       ),

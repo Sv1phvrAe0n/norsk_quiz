@@ -3,17 +3,16 @@ import 'dart:math';
 List<String> grammar = ['Infinitive', "Present", "Preterite", "Present perfect"];
 
 var wordsList = [
-  words1, words2, words3, words4, words5, words6, words7, words8, words9,
-  words10, words11, words12, words13, words14, words15, words16, words17, words19,
-  words20, words21, words22, words23, words24, words25, words26, words27, words28,
-  words30, words31, words32, words33, words34, words35, words36, words37, words38,
-  words39, words40, words41, words42, words43, words44, words45, words46, words47,
-  words48, words49, words50, words51, words52, words53, words54, words55, words56,
-  words57, words58, words59, words60, words61, words62, words63, words64, words65,
-  words66, words67, words68, words69, words70, words71, words72, words73, words74,
-  words75, words76, words77, words78, words79, words80, words81, words82, words83,
-  words84, words85, words86, words87, words88, words89, words90, words91, words92,
-  words93, words94, words95, words96, words97, words98, words99, words100
+  words1, words2, words3, words4, words5, words6, words7, words8, words9, words10,
+  words11, words12, words13, words14, words15, words16, words17, words18, words19, words20,
+  words21, words22, words23, words24, words25, words26, words27, words28, words29, words30,
+  words31, words32, words33, words34, words35, words36, words37, words38, words39, words40,
+  words41, words42, words43, words44, words45, words46, words47, words48, words49, words50,
+  words51, words52, words53, words54, words55, words56, words57, words58, words59, words60,
+  words61, words62, words63, words64, words65, words66, words67, words68, words69, words70,
+  words71, words72, words73, words74, words75, words76, words77, words78, words79, words80,
+  words81, words82, words83, words84, words85, words86, words87, words88, words89, words90,
+  words91, words92, words93, words94, words95, words96, words97, words98, words99, words100
 ];
 
 
@@ -39,7 +38,7 @@ var datalist = [
   {'words': words19, 'translation': 'to fall'},
   {'words': words20, 'translation': 'to exist, be found'},
   {'words': words21, 'translation': 'to find'},
-  {'words': words22, 'translation': 'to love'},//ГОТОВО
+  {'words': words22, 'translation': 'to love'},
   {'words': words23, 'translation': 'to explain'},
   {'words': words24, 'translation': 'to understand'},
   {'words': words25, 'translation': 'to tell, explain'},
@@ -72,7 +71,7 @@ var datalist = [
   {'words': words52, 'translation': 'to read, study'},
   {'words': words53, 'translation': 'to live'},
   {'words': words54, 'translation': 'to lie'},
-  {'words': words55, 'translation': 'to match,\nto be equal'}, // ГОТОВО
+  {'words': words55, 'translation': 'to match,\nto be equal'},
   {'words': words56, 'translation': 'to like'},
   {'words': words57, 'translation': 'to learn, teach'},
   {'words': words58, 'translation': 'to run'},
@@ -121,14 +120,19 @@ var datalist = [
 ];
 
 class Quiz {
-  Quiz({this.quizId, this.qnaMap, this.translation});
+
   final int quizId;
   final String translation;
   final Map<String, String> qnaMap;
+
+  Quiz({this.quizId, this.qnaMap, this.translation});
 }
 
 List<Quiz> quizes = datalist.map((data) {
-  return Quiz(quizId: Random().nextInt(300000000) + 1, qnaMap: Map.fromIterables(data['words'], grammar), translation: data['translation']);
+  return Quiz(
+      quizId: Random().nextInt(300000000) + 1,
+      qnaMap: Map.fromIterables(data['words'], grammar),
+      translation: data['translation']);
 }).toList()..shuffle(Random());
 
 List<String> words1 = ['arbeide', 'arbeider', 'arbeidet','har arbeidet'];

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:norsk_quiz/AppBars.dart';
 import 'package:norsk_quiz/styles.dart';
 
 class QuestionGram extends StatefulWidget {
@@ -15,23 +16,7 @@ class _QuestionGramState extends State<QuestionGram> {
       child:
       Scaffold(
         backgroundColor: Color(0xffFFFFFF),
-        appBar: AppBar(
-          brightness: Brightness.dark,
-          backgroundColor: Color(0xff231A31),
-          title: Text(
-            'Grammar',
-            style: TextStyle(
-              color: Color(0xffFFFFFF),
-              fontFamily: 'Comfortaa',
-            ),
-          ),
-          centerTitle: true,
-          leading: IconButton(icon: Icon(Icons.arrow_back_rounded),
-            onPressed: () {
-              Navigator.pushNamed(context, '/q');
-            },
-          ),
-        ),
+        appBar: MinimalAppBar('Grammar', '/q'),
         body: SingleChildScrollView(
           child: Container(
               color: Color(0xffFFFFFF),
@@ -45,12 +30,11 @@ class _QuestionGramState extends State<QuestionGram> {
                   ),
                   SizedBox(height: 10),
                   RichText(
-                    textAlign: TextAlign.start,
                       text: TextSpan(
                         children: [
                           TextSpan(text: 'Use these ', style: MainGrammar),
                           TextSpan(text: '5 ', style: BoldGrammar),
-                          TextSpan(text: 'easy patterns to form a question:', style: MainGrammar),
+                          TextSpan(text: 'simple patterns to form a question:', style: MainGrammar),
                         ],
                       )),
                   SizedBox(height: 30),
@@ -199,7 +183,6 @@ class _QuestionGramState extends State<QuestionGram> {
                           padding: const EdgeInsets.all(7.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-// mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               RichText(
                                   text: TextSpan(
@@ -412,7 +395,6 @@ class _QuestionGramState extends State<QuestionGram> {
                           padding: const EdgeInsets.all(8.5),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-// mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               RichText(
                                   text: TextSpan(
@@ -740,7 +722,6 @@ class _QuestionGramState extends State<QuestionGram> {
                           padding: const EdgeInsets.all(7.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-// mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               RichText(
                                   text: TextSpan(
@@ -884,7 +865,8 @@ class _QuestionGramState extends State<QuestionGram> {
                   RichText(
                       text: TextSpan(
                         children: [
-                          TextSpan(text: 'Take any declarative sentence, extract the verb and put it at the beginning of the sentence', style: MainGrammar),
+                          TextSpan(text: 'Take any declarative sentence, extract the verb and put it at the beginning of the sentence',
+                              style: MainGrammar),
                         ],
                       )),
                   SizedBox(height: 10),
